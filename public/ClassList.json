@@ -1,0 +1,21 @@
+[
+  {
+    "department": "CS",
+    "num": "123",
+    "name": "Sample Course I",
+    "creds":  "1-3"
+
+  },
+  {
+    "department": "CS",
+    "num": "133",
+    "name": "Sample Course II",
+    "creds": "3"
+  },
+  {
+    "department": "CS",
+    "num": "321",
+    "name": "Sample Course III",
+    "creds": "4"
+  }
+]
