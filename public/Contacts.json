@@ -1,0 +1,258 @@
+[
+ {
+   "lastname": "Adams",
+   "firstName": "Ryan",
+   "email": "ryan.s.adams@UND.edu ",
+   "phone": "701.777.5644",
+   "department": "SEECS",
+   "title": "Director"
+ },
+ {
+   "lastname": "Andraju",
+   "firstName": "Nagababu",
+   "email": "nagababu.andraju@UND.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Post Doc Research Fellow"
+ },
+ {
+   "lastname": "Apostal",
+   "firstName": "David",
+   "email": "david.apostal@UND.edu ",
+   "phone": "701.777.6407",
+   "department": "VP Research & Economic Dev",
+   "title": "ACIREF Sr"
+ },
+ {
+   "lastname": "Delhommelle",
+   "firstName": "Jerome",
+   "email": "jerome.delhommelle@UND.edu ",
+   "phone": "701.777.2495",
+   "department": "Chemistry",
+   "title": "Associate Professor"
+ },
+ {
+   "lastname": "Elderini",
+   "firstName": "Tarek",
+   "email": "tarek.elderini@UND.edu ",
+   "phone": "701.777.6505",
+   "department": "SEECS",
+   "title": "Instructor"
+ },
+ {
+   "lastname": "Essafri",
+   "firstName": "Ilham",
+   "email": "ilham.essafri@UND.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Post Doc Research Fellow"
+ },
+ {
+   "lastname": "Faruque",
+   "firstName": "Saleh",
+   "email": "saleh.faruque@UND.edu ",
+   "phone": "701.777.4428",
+   "department": "SEECS",
+   "title": "Professor"
+ },
+ {
+   "lastname": "Ghosh",
+   "firstName": "Bappa",
+   "email": "bappa.ghosh@UND.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Post Doc Research Fellow"
+ },
+ {
+   "lastname": "Grant",
+   "firstName": "Emanuel",
+   "email": "emanuel.grant@UND.edu ",
+   "phone": "701.777.4133",
+   "department": "SEECS",
+   "title": "Assoc. Professor"
+ },
+ {
+   "lastname": "Hammer",
+   "firstName": "Karla",
+   "email": "karla.hammer@UND.edu ",
+   "phone": "701.777.4107",
+   "department": "SEECS",
+   "title": "Part-time Instructional"
+ },
+ {
+   "lastname": "Hu",
+   "firstName": "Wen-Chen",
+   "email": "wen.chen.hu@UND.edu ",
+   "phone": "701.777.2413",
+   "department": "SEECS",
+   "title": "Associate Professor"
+ },
+ {
+   "lastname": "Kaabouch",
+   "firstName": "Naima",
+   "email": "naima.kaabouch@UND.edu ",
+   "phone": "701.777.4460",
+   "department": "SEECS",
+   "title": "Professor"
+ },
+ {
+   "lastname": "Khan",
+   "firstName": "Jawad",
+   "email": "jawad.a.khan@UND.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Temp Research Lab (Hrly)"
+ },
+ {
+   "lastname": "Kim",
+   "firstName": "Marina",
+   "email": "eunjin.kim@UND.edu ",
+   "phone": "701.777.3338",
+   "department": "SEECS",
+   "title": "Assoc. Professor"
+ },
+ {
+   "lastname": "Kim",
+   "firstName": "Min Seok",
+   "email": "minseok.kim.1@UND.edu ",
+   "phone": "701.777.5644",
+   "department": "SEECS",
+   "title": "Assistant Professor"
+ },
+ {
+   "lastname": "Kuehn",
+   "firstName": "Fatima",
+   "email": "fatima.eljamiy@UND.edu ",
+   "phone": "701.777.2180",
+   "department": "SEECS",
+   "title": "Instructor of Data Science"
+ },
+ {
+   "lastname": "Liang",
+   "firstName": "Bo",
+   "email": "bo.liang@UND.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Asst Prof Biomedcl Engineering"
+ },
+ {
+   "lastname": "Liu",
+   "firstName": "Jun",
+   "email": "jun.liu@UND.edu ",
+   "phone": "701.777.4982",
+   "department": "SEECS",
+   "title": "Assoc. Professor"
+ },
+ {
+   "lastname": "Maguire",
+   "firstName": "James",
+   "email": "james.maguire@UND.edu ",
+   "phone": "701.777.6489",
+   "department": "SEECS",
+   "title": "Part-time Instructional"
+ },
+ {
+   "lastname": "Marsh",
+   "firstName": "Ronald",
+   "email": "ronald.marsh@UND.edu ",
+   "phone": "701.777.4013",
+   "department": "SEECS",
+   "title": "Professor & Associate Director"
+ },
+ {
+   "lastname": "Mullins",
+   "firstName": "Michael",
+   "email": "michael.mullins@UND.edu ",
+   "phone": "701.777.4331",
+   "department": "SEECS",
+   "title": "Spectrum Decision - Naima"
+ },
+ {
+   "lastname": "Nordlie",
+   "firstName": "John",
+   "email": "john.nordlie@UND.edu ",
+   "phone": "701.777.2891",
+   "department": "SEECS",
+   "title": "Instructor"
+ },
+ {
+   "lastname": "Polat",
+   "firstName": "Ediz",
+   "email": "ediz.polat@UND.edu ",
+   "phone": "701.777.4334",
+   "department": "SEECS",
+   "title": "Teaching Professor"
+ },
+ {
+   "lastname": "Ramchandra",
+   "firstName": "Akshay Ram",
+   "email": "akshay.ramchandra@ndus.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Temp Research Lab (Hrly)"
+ },
+ {
+   "lastname": "Ranganathan",
+   "firstName": "Prakash",
+   "email": "prakash.ranganathan@UND.edu ",
+   "phone": "701.777.4431",
+   "department": "SEECS",
+   "title": "Assistant Professor of Electrical Engineering"
+ },
+ {
+   "lastname": "Reza",
+   "firstName": "Hassan",
+   "email": "hassan.reza@UND.edu ",
+   "phone": "701.777.4127",
+   "department": "SEECS",
+   "title": "Professor"
+ },
+ {
+   "lastname": "Russell",
+   "firstName": "Tyler",
+   "email": "tyler.russell.1@UND.edu ",
+   "phone": "",
+   "department": "SEECS",
+   "title": "Part-time Instructional"
+ },
+ {
+   "lastname": "Salehfar",
+   "firstName": "Hossein",
+   "email": "h.salehfar@UND.edu ",
+   "phone": "701.777.4432",
+   "department": "SEECS",
+   "title": "Professor"
+ },
+ {
+   "lastname": "Selvaraj",
+   "firstName": "Daisy Flora",
+   "email": "dselvaraj@undeerc.org ",
+   "phone": "701.777.6712",
+   "department": "EERC",
+   "title": "Research Engineer"
+ },
+ {
+   "lastname": "Singhal",
+   "firstName": "Sandeep",
+   "email": "sandeep.singhal@UND.edu ",
+   "phone": "701.777.0389",
+   "department": "Pathology",
+   "title": "Assistant Professor"
+ },
+ {
+   "lastname": "Souza",
+   "firstName": "William",
+   "email": "william.souza@UND.edu ",
+   "phone": "701.777.6489",
+   "department": "SEECS",
+   "title": "Part-time Instructional"
+ },
+ {
+   "lastname": "Stokke",
+   "firstName": "Thomas",
+   "email": "thomas.stokke@UND.edu ",
+   "phone": "701.777.2180",
+   "department": "SEECS",
+   "title": "Assistant Professor"
+ }
+]
