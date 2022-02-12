@@ -83,21 +83,21 @@
                     v-bind="attrs"
                     v-on="on"
                   >
-                    <span>{{ typeToLabel[type] }}</span>
+                    <span>{{ typeToLabel[displayTypes] }}</span>
                     <v-icon right> mdi-menu-down </v-icon>
                   </v-btn>
                 </template>
                 <v-list>
-                  <v-list-item @click="type = 'day'">
+                  <v-list-item @click="displayTypes = 'day'">
                     <v-list-item-title>Day</v-list-item-title>
                   </v-list-item>
-                  <v-list-item @click="type = 'week'">
+                  <v-list-item @click="displayTypes = 'week'">
                     <v-list-item-title>Week</v-list-item-title>
                   </v-list-item>
-                  <v-list-item @click="type = 'month'">
+                  <v-list-item @click="displayTypes = 'month'">
                     <v-list-item-title>Month</v-list-item-title>
                   </v-list-item>
-                  <v-list-item @click="type = '4day'">
+                  <v-list-item @click="displayTypes = '4day'">
                     <v-list-item-title>4 days</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -107,13 +107,15 @@
           <v-sheet height="auto">
             <v-calendar
               ref="calendar"
-              v-model="value"
+              v-model="focus"
               color="primary"
-              type="4day"
+              :type="displayTypes"
               :events="events"
               :event-color="getEventColor"
               :event-ripple="false"
-              @change="getEvents"
+              @click:event="showEvent"
+              @click:more="viewDay"
+              @click:date="viewDay"
               @mousedown:event="startDrag"
               @mousedown:time="startTime"
               @mousemove:time="mouseMove"
@@ -170,7 +172,7 @@ export default {
     facultyList: [],
     classList: [],
     focus: "",
-    type: "month",
+    displayTypes: "week",
     typeToLabel: {
       month: "Month",
       week: "Week",
@@ -335,7 +337,7 @@ export default {
     },
     viewDay({ date }) {
       this.focus = date;
-      this.type = "day";
+      this.displayTypes = "day";
     },
 
     setToday() {
