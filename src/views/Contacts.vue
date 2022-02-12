@@ -5,58 +5,55 @@
         SEECS Faculty Listing
         <v-spacer></v-spacer>
         <v-text-field
-            v-model="search"
-            append-icon="mdi-magnify"
-            label="Search"
-            single-line
-            hide-details
+          v-model="search"
+          append-icon="mdi-magnify"
+          label="Search"
+          single-line
+          hide-details
         ></v-text-field>
       </v-card-title>
       <v-data-table
-          :headers="headers"
-          :items="faculty"
-          :search="search"
+        :headers="headers"
+        :items="faculty"
+        :search="search"
       ></v-data-table>
     </v-card>
   </v-app>
 </template>
 
-
 <script>
-
-
 export default {
-  data()  {
+  data() {
     return {
-      search: '',
+      search: "",
       headers: [
         {
-          text: 'Last Name',
-          align: 'start',
+          text: "Last Name",
+          align: "start",
           sortable: false,
-          value: 'lastname',
+          value: "lastname",
         },
-        {text: 'First Name', value: 'firstName'},
-        {text: 'Email', value: 'email'},
-        {text: 'Phone', value: 'phone'},
-        {text: 'Department', value: 'department'},
-        {text: 'Title', value: 'title'},
+        { text: "First Name", value: "firstName" },
+        { text: "Email", value: "email" },
+        { text: "Phone", value: "phone" },
+        { text: "Department", value: "department" },
+        { text: "Title", value: "title" },
       ],
-      faculty: []
+      faculty: [],
     };
   },
   methods: {
     getFacultyData() {
-      fetch('./Contacts.json').then(response => response.json())
-          .then(data => (this.faculty = data));
-      console.log(this.faculty)
-    }
+      fetch("./Contacts.json")
+        .then((response) => response.json())
+        .then((data) => (this.faculty = data));
+      console.log(this.faculty);
+    },
   },
   mounted() {
     this.getFacultyData();
-  }
+  },
 };
-
 </script>
 
 <style>
