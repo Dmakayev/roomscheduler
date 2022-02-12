@@ -7,6 +7,7 @@ import Calendar from "@/views/Calendar";
 import CompSciCourses from "@/views/CS-Courses";
 import EECourses from "@/views/EE-Courses";
 import DeadEnd from "@/views/DeadEnd";
+import Requests from "@/views/Requests";
 
 
 Vue.use(VueRouter)
@@ -41,6 +42,11 @@ const routes = [
     path: "/ee-courses",
     name: "Electrical Engineering Courses",
     component: EECourses,
+  },
+  {
+    path: "/requests",
+    name: "Request Calendar Slot",
+    component: Requests,
   },
   {
     path: "/:catchAll(.*)",
