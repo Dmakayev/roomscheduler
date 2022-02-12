@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "@/views/Home.vue";
 import FactoryCenter from "@/views/FactoryCenter";
 import Contacts from "@/views/Contacts";
 import Calendar from "@/views/Calendar";
@@ -9,14 +9,13 @@ import EECourses from "@/views/EE-Courses";
 import DeadEnd from "@/views/DeadEnd";
 import Requests from "@/views/Requests";
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
     path: "/factory-center",
@@ -50,14 +49,14 @@ const routes = [
   },
   {
     path: "/:catchAll(.*)",
-    component: DeadEnd
-  }
-]
+    component: DeadEnd,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
