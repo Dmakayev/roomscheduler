@@ -10,7 +10,7 @@
           v-model="selectFaculty"
           :items="facultyList"
           item-text="firstName"
-          item-value="lastname"
+          item-value="lastName"
           label="Select Faculty Name"
           persistent-hint
           return-object
@@ -18,10 +18,10 @@
           @input="setFacultyName"
         >
           <template v-slot:item="data">
-            {{ data.item.firstName }} {{ data.item.lastname }}
+            {{ data.item.lastName }}, {{ data.item.firstName }}
           </template>
           <template v-slot:selection="data">
-            {{ data.item.firstName }} {{ data.item.lastname }}
+            {{ data.item.lastName }}, {{ data.item.firstName }}
           </template>
         </v-select>
       </v-col>
@@ -139,6 +139,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data: () => ({
     value: "",
@@ -167,7 +169,7 @@ export default {
     createEvent: null,
     createStart: null,
     extendOriginal: null,
-    selectFaculty: { firstName: "Null", lastname: "Void" },
+    selectFaculty: { firstName: "Null", lastName: "Void" },
     selectClass: { department: "Null", num: "Null", name: "Null" },
     facultyList: [],
     classList: [],
@@ -204,7 +206,7 @@ export default {
       } else {
         this.createStart = this.roundTime(mouse);
         this.createEvent = {
-          name: `${this.selectFaculty.firstName} ${this.selectFaculty.lastname} | ${this.selectClass.department}${this.selectClass.num} ${this.selectClass.name}`,
+          name: `${this.selectFaculty.lastName} ${this.selectFaculty.firstName} | ${this.selectClass.department}${this.selectClass.num} ${this.selectClass.name}`,
           color: this.rndElement(this.colors),
           start: this.createStart,
           end: this.createStart,
@@ -325,9 +327,13 @@ export default {
       return arr[this.rnd(0, arr.length - 1)];
     },
     getNameData() {
-      fetch("./Contacts.json")
-        .then((response) => response.json())
-        .then((data) => (this.facultyList = data));
+      axios.get("http://127.0.0.1:8000/FacultyNames").then((response) => {
+        this.facultyList = response.data;
+      });
+
+      // fetch("./Contacts.json")
+      //   .then((response) => response.json())
+      //   .then((data) => (this.facultyList = data));
     },
 
     getClassData() {
