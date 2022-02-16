@@ -1,21 +1,533 @@
 [
-  {
-    "department": "CS",
-    "num": "123",
-    "name": "Sample Course I",
-    "creds":  "1-3"
 
-  },
   {
-    "department": "CS",
-    "num": "133",
-    "name": "Sample Course II",
+    "department": "CSCI",
+    "num": "101",
+    "name": "Introduction to Computers",
     "creds": "3"
   },
   {
-    "department": "CS",
-    "num": "321",
-    "name": "Sample Course III",
+    "department": "CSCI",
+    "num": "110",
+    "name": "Intro to Computer Science",
+    "creds": "3"
+  },
+  {
+    "department": "CSCI",
+    "num": "130",
+    "name": "Intro Scientific Programming",
     "creds": "4"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "130",
+    "name": "Intro Scientific Programming",
+    "creds": "4"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "160",
+    "name": "Computer Science I",
+    "creds": "4"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "160",
+    "name": "Computer Science I",
+    "creds": "0"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "161",
+    "name": "Computer Science II",
+    "creds": "4"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "161",
+    "name": "Computer Science II",
+    "creds": "0"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "242",
+    "name": "Algorithms and Data Structures ",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "265",
+    "name": "Intro to Programming Lang.",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "280",
+    "name": "Object Oriented Programming",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "289",
+    "name": "Soc Imp of Computer Technology ",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "290",
+    "name": "Cyber-Sec and Info Assurance",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "327",
+    "name": "Data Communications",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "330",
+    "name": "Systems Programming",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "363",
+    "name": "User Interface Design",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "397",
+    "name": "Cooperative Education",
+    "creds": "1"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "397",
+    "name": "Cooperative Education",
+    "creds": "2"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "399",
+    "name": "Topics in Computer Science",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "435",
+    "name": "Formal Languages & Automata",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "446",
+    "name": "Computer Graphics I",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "451",
+    "name": "Operating Systems I",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "465",
+    "name": "Principles of Translation",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "492",
+    "name": "Senior Project I",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "494",
+    "name": "Special Projects",
+    "creds": "1 - 3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "494",
+    "name": "Special Projects",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "513",
+    "name": "Advanced Database Systems",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "532",
+    "name": "High Perfrm Comput & Paradigms ",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "537",
+    "name": "Graduate Cooperative Education ",
+    "creds": "1"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "544",
+    "name": "Soft Computing",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "565",
+    "name": "Advanced Software Engineering ",
+    "creds": "3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "591",
+    "name": "Directed Studies",
+    "creds": "1 - 3"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "599",
+    "name": "Research",
+    "creds": "1 - 6"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "997",
+    "name": "Independent Study",
+    "creds": "2"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "998",
+    "name": "Thesis",
+    "creds": "1 - 9"
+  },
+  {
+
+    "department": "CSCI",
+    "num": "999",
+    "name": "Dissertation Research",
+    "creds": "1 - 12"
+  },
+  {
+
+    "department": "EE",
+    "num": "101",
+    "name": "Intro Electrical Engineering",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "201",
+    "name": "Intro to Digital Electronics",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "201",
+    "name": "LDigital Electronics Lab",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "206",
+    "name": "Circuit Analysis",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "206",
+    "name": "LCircuits Laboratory I",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "304",
+    "name": "Computer Aided Measure & Contr ",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "313",
+    "name": "Linear Electric Circuits",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "313",
+    "name": "LCircuits Laboratory II",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "314",
+    "name": "Signals and Systems",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "314",
+    "name": "LSignal and Systems Laboratory ",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "316",
+    "name": "Electric & Magnetic Fields",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "318",
+    "name": "Engineering Data Analysis",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "321",
+    "name": "Electronics I",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "321",
+    "name": "LElectronics Laboratory I",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "397",
+    "name": "Cooperative Education",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "397",
+    "name": "Cooperative Education",
+    "creds": "2"
+  },
+  {
+
+    "department": "EE",
+    "num": "428",
+    "name": "Robotics Fundamentals",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "434",
+    "name": "Microwave Engineering",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "451",
+    "name": "Computer Hardware Organization ",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "456",
+    "name": "Digital Image Processing",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "480",
+    "name": "Senior Design I",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "481",
+    "name": "Senior Design II",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "489",
+    "name": "Senior Honors Thesis",
+    "creds": "1 - 8"
+  },
+  {
+
+    "department": "EE",
+    "num": "490",
+    "name": "Electrical Engineering Prob",
+    "creds": "1 - 9"
+  },
+  {
+
+    "department": "EE",
+    "num": "490",
+    "name": "Electrical Engineering Prob",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "505",
+    "name": "Control Systems II",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "523",
+    "name": "Power Systems II",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "534",
+    "name": "Adv. Wireless Comm. Eng.",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "537",
+    "name": "Graduate Cooperative Education ",
+    "creds": "1"
+  },
+  {
+
+    "department": "EE",
+    "num": "590",
+    "name": "Advanced Electrical Engr Prob",
+    "creds": "1 - 6"
+  },
+  {
+
+    "department": "EE",
+    "num": "591",
+    "name": "EE Research",
+    "creds": "1 - 6"
+  },
+  {
+
+    "department": "EE",
+    "num": "591",
+    "name": "EE Research",
+    "creds": "1 - 6"
+  },
+  {
+
+    "department": "EE",
+    "num": "591",
+    "name": "EE Research",
+    "creds": "1 - 6"
+  },
+  {
+
+    "department": "EE",
+    "num": "599",
+    "name": "EE Doctoral Research",
+    "creds": "1 - 15"
+  },
+  {
+
+    "department": "EE",
+    "num": "601",
+    "name": "Foundations of Cyber Security ",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "640",
+    "name": "Communication Protocols",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "994",
+    "name": "Capstone",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "997",
+    "name": "Independent Study",
+    "creds": "3"
+  },
+  {
+
+    "department": "EE",
+    "num": "998",
+    "name": "Thesis",
+    "creds": "1 - 6"
+  },
+  {
+
+    "department": "EE",
+    "num": "999",
+    "name": "EE Dissertation",
+    "creds": "1 - 18"
   }
+
 ]
