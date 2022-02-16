@@ -33,6 +33,9 @@
         <v-btn class="mx-2" depressed elevation="2" to="/ee-courses"
           >EE Courses
         </v-btn>
+        <v-btn class="mx-2" depressed elevation="2" to="/help"
+        >Help
+        </v-btn>
         <v-btn class="mx-2" depressed elevation="2" to="/factory-center"
           >Factory Center
         </v-btn>

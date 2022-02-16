@@ -8,7 +8,7 @@ import CompSciCourses from "@/views/CS-Courses";
 import EECourses from "@/views/EE-Courses";
 import DeadEnd from "@/views/DeadEnd";
 import Requests from "@/views/Requests";
-
+import Help from "@/views/Help";
 Vue.use(VueRouter);
 
 const routes = [
@@ -46,6 +46,11 @@ const routes = [
     path: "/requests",
     name: "Request Calendar Slot",
     component: Requests,
+  },
+  {
+    path: "/help",
+    name: "Help",
+    component: Help,
   },
   {
     path: "/:catchAll(.*)",
