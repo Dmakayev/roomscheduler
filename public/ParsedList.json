@@ -1,0 +1,2032 @@
+[
+  {
+    "CSCI 101": {
+      "className": "Introduction to Computers",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "150",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "35",
+          "days": "",
+          "number": "9297",
+          "time": "TBA",
+          "instructor": ""
+        },
+        "01": {
+          "capacity": "28",
+          "room": "LENRD 110",
+          "waitSize": "10",
+          "enrollment": "14",
+          "days": "MWF",
+          "number": "9286",
+          "time": "1:25p-2:15p",
+          "instructor": ""
+        }
+      }
+    },
+    "CSCI 110": {
+      "className": "Intro to Computer Science",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "11",
+          "days": "",
+          "number": "9316",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "01": {
+          "capacity": "32",
+          "room": "CECOMP 209",
+          "waitSize": "10",
+          "enrollment": "5",
+          "days": "TR",
+          "number": "9309",
+          "time": "9:30a-10:45a",
+          "instructor": "Stokke, T"
+        }
+      }
+    },
+    "CSCI 130": {
+      "className": "Intro Scientific Programming",
+      "credits": "4",
+      "sections": {
+        "02": {
+          "capacity": "35",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "MWF",
+          "number": "10211",
+          "time": "2:30p-3:20p",
+          "instructor": "Nordlie, J"
+        },
+        "03": {
+          "capacity": "36",
+          "room": "UND ONLINE",
+          "waitSize": "10",
+          "enrollment": "29",
+          "days": "",
+          "number": "10212",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "10",
+          "days": "MWF",
+          "number": "10210",
+          "time": "2:30p-3:20p",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 160": {
+      "className": "Computer Science I",
+      "credits": "4",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "50",
+          "days": "",
+          "number": "9311",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "01": {
+          "capacity": "72",
+          "room": "ED 113",
+          "waitSize": "15",
+          "enrollment": "34",
+          "days": "MWF",
+          "number": "9260",
+          "time": "9:05a-9:55a",
+          "instructor": "Stokke, T"
+        },
+        "L03": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "44",
+          "days": "",
+          "number": "9313",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "L02": {
+          "capacity": "30",
+          "room": "CECOMP 209",
+          "waitSize": "10",
+          "enrollment": "10",
+          "days": "R",
+          "number": "9301",
+          "time": "7:00p-9:00p",
+          "instructor": "Stokke, T"
+        },
+        "L01": {
+          "capacity": "30",
+          "room": "CECOMP 209",
+          "waitSize": "10",
+          "enrollment": "30",
+          "days": "T",
+          "number": "9300",
+          "time": "5:00p-7:00p",
+          "instructor": "Stokke, T"
+        }
+      }
+    },
+    "CSCI 161": {
+      "className": "Computer Science II",
+      "credits": "4",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "16",
+          "days": "",
+          "number": "9312",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "01": {
+          "capacity": "72",
+          "room": "HARRI 324",
+          "waitSize": "15",
+          "enrollment": "33",
+          "days": "MWF",
+          "number": "9261",
+          "time": "1:25p-2:15p",
+          "instructor": "Nordlie, J"
+        },
+        "L03": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "20",
+          "days": "",
+          "number": "9314",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "L02": {
+          "capacity": "30",
+          "room": "CECOMP 209",
+          "waitSize": "10",
+          "enrollment": "13",
+          "days": "T",
+          "number": "9303",
+          "time": "7:00p-9:00p",
+          "instructor": "Nordlie, J"
+        },
+        "L01": {
+          "capacity": "30",
+          "room": "CECOMP 209",
+          "waitSize": "10",
+          "enrollment": "16",
+          "days": "R",
+          "number": "9302",
+          "time": "5:00p-7:00p",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 242": {
+      "className": "Algorithms and Data Structures",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "10",
+          "days": "",
+          "number": "9319",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "01": {
+          "capacity": "53",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "24",
+          "days": "TR",
+          "number": "9262",
+          "time": "11:00a-12:15",
+          "instructor": "Kim, M"
+        }
+      }
+    },
+    "CSCI 266": {
+      "className": "Tools and Tech. of Computing",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "8",
+          "days": "",
+          "number": "17244",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "01": {
+          "capacity": "32",
+          "room": "HARRI 218",
+          "waitSize": "10",
+          "enrollment": "9",
+          "days": "TR",
+          "number": "17243",
+          "time": "12:30-1:45p",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 270": {
+      "className": "Programming for Data Science",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "12",
+          "days": "",
+          "number": "9320",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "01": {
+          "capacity": "72",
+          "room": "HARRI 324",
+          "waitSize": "15",
+          "enrollment": "6",
+          "days": "TR",
+          "number": "9317",
+          "time": "9:30a-10:45a",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 289": {
+      "className": "Soc Imp of Computer Technology",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "14",
+          "days": "",
+          "number": "9310",
+          "time": "TBA",
+          "instructor": "Grant, E"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "CECOMP 205",
+          "waitSize": "10",
+          "enrollment": "11",
+          "days": "MWF",
+          "number": "9315",
+          "time": "4:40p-5:30p",
+          "instructor": "Grant, E"
+        }
+      }
+    },
+    "CSCI 290": {
+      "className": "Cyber-Sec and Info Assurance",
+      "credits": "3",
+      "sections": {
+        "01": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "15",
+          "enrollment": "60",
+          "days": "",
+          "number": "9298",
+          "time": "TBA",
+          "instructor": "Hammer, K"
+        }
+      }
+    },
+    "CSCI 297": {
+      "className": "Experiential Learning",
+      "credits": "1",
+      "sections": {
+        "01": {
+          "capacity": "25",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "2",
+          "days": "T",
+          "number": "9308",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 330": {
+      "className": "Systems Programming",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "12",
+          "days": "",
+          "number": "9318",
+          "time": "TBA",
+          "instructor": "Marsh, R"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "CECOMP 205",
+          "waitSize": "20",
+          "enrollment": "9",
+          "days": "MWF",
+          "number": "9295",
+          "time": "11:15a-12:05",
+          "instructor": "Marsh, R"
+        }
+      }
+    },
+    "CSCI 364": {
+      "className": "Conc. & Distd. programming",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "0",
+          "days": "",
+          "number": "9322",
+          "time": "TBA",
+          "instructor": "Apostal, D"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "LENRD 110",
+          "waitSize": "10",
+          "enrollment": "2",
+          "days": "TR",
+          "number": "9307",
+          "time": "2:00p-3:15p",
+          "instructor": "Apostal, D"
+        }
+      }
+    },
+    "CSCI 365": {
+      "className": "Org of Programming Lang",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "9",
+          "days": "",
+          "number": "9323",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "ED 5",
+          "waitSize": "10",
+          "enrollment": "9",
+          "days": "MWF",
+          "number": "9263",
+          "time": "2:30p-3:20p",
+          "instructor": "Stokke, T"
+        }
+      }
+    },
+    "CSCI 370": {
+      "className": "Computer Architecture",
+      "credits": "4",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "15",
+          "days": "",
+          "number": "9324",
+          "time": "TBA",
+          "instructor": "Hu, W"
+        },
+        "01": {
+          "capacity": "32",
+          "room": "LENRD 109",
+          "waitSize": "10",
+          "enrollment": "7",
+          "days": "MW",
+          "number": "9284",
+          "time": "10:10a-11:00a",
+          "instructor": "Hu, W"
+        }
+      }
+    },
+    "CSCI 384": {
+      "className": "Artificial Intelligence",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "7",
+          "days": "",
+          "number": "9321",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "01": {
+          "capacity": "22",
+          "room": "UPS2 263",
+          "waitSize": "5",
+          "enrollment": "3",
+          "days": "TR",
+          "number": "9285",
+          "time": "3:30p-4:45p",
+          "instructor": "Kim, M"
+        }
+      }
+    },
+    "CSCI 389": {
+      "className": "Computer & Network Security",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "9",
+          "days": "",
+          "number": "9325",
+          "time": "TBA",
+          "instructor": "Liu, J"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "HARRI 218",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "TR",
+          "number": "9264",
+          "time": "2:00p-3:15p",
+          "instructor": "Liu, J"
+        }
+      }
+    },
+    "CSCI 397": {
+      "className": "Cooperative Education",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9305",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "01": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9304",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        }
+      }
+    },
+    "CSCI 448": {
+      "className": "Computer Graphics II",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "1",
+          "days": "",
+          "number": "17242",
+          "time": "TBA",
+          "instructor": "Marsh, R"
+        },
+        "01": {
+          "capacity": "32",
+          "room": "HARRI 217",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "MWF",
+          "number": "17241",
+          "time": "2:30p-3:20p",
+          "instructor": "Marsh, R"
+        }
+      }
+    },
+    "CSCI 455": {
+      "className": "Database Management Systems",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "11",
+          "days": "",
+          "number": "9326",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        },
+        "01": {
+          "capacity": "30",
+          "room": "HARRI 204",
+          "waitSize": "10",
+          "enrollment": "11",
+          "days": "TR",
+          "number": "9273",
+          "time": "11:00a-12:15",
+          "instructor": "Reza, H"
+        }
+      }
+    },
+    "CSCI 463": {
+      "className": "Software Engineering",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "7",
+          "days": "",
+          "number": "9327",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "LENRD 110",
+          "waitSize": "10",
+          "enrollment": "3",
+          "days": "TR",
+          "number": "9274",
+          "time": "3:30p-4:45p",
+          "instructor": "Reza, H"
+        }
+      }
+    },
+    "CSCI 493": {
+      "className": "Senior Project II",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "8",
+          "days": "",
+          "number": "9334",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "9",
+          "days": "TR",
+          "number": "9296",
+          "time": "3:30p-4:45p",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 493H": {
+      "className": "Senior Project II",
+      "credits": "3",
+      "sections": {
+        "03": {
+          "capacity": "5",
+          "room": "HARRI 324",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "TR",
+          "number": "18117",
+          "time": "3:30p-4:45p",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 494": {
+      "className": "Special Projects",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9266",
+          "time": "TBA",
+          "instructor": "Grant, E"
+        },
+        "03": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9267",
+          "time": "TBA",
+          "instructor": "Hu, W"
+        },
+        "01": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9265",
+          "time": "TBA",
+          "instructor": "Marsh, R"
+        },
+        "06": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9270",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "07": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9271",
+          "time": "TBA",
+          "instructor": "Liu, J"
+        },
+        "04": {
+          "capacity": "20",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9268",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        },
+        "05": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9269",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        },
+        "08": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9272",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "09": {
+          "capacity": "15",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9283",
+          "time": "TBA",
+          "instructor": ""
+        },
+        "10": {
+          "capacity": "40",
+          "room": "",
+          "waitSize": "10",
+          "enrollment": "0",
+          "days": "",
+          "number": "9330",
+          "time": "TBA",
+          "instructor": "Nordlie, J"
+        }
+      }
+    },
+    "CSCI 515": {
+      "className": "Data Engineering and Mgmt",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "2",
+          "days": "",
+          "number": "9329",
+          "time": "TBA",
+          "instructor": "Hu, W"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "CECOMP 205",
+          "waitSize": "0",
+          "enrollment": "4",
+          "days": "MWF",
+          "number": "9328",
+          "time": "2:30p-3:20p",
+          "instructor": "Hu, W"
+        }
+      }
+    },
+    "CSCI 522": {
+      "className": "Theoretical Foundation of CSCI",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "0",
+          "days": "",
+          "number": "9336",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "CECOMP 209",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "MWF",
+          "number": "9335",
+          "time": "10:10a-11:00a",
+          "instructor": "Kim, M"
+        }
+      }
+    },
+    "CSCI 537": {
+      "className": "Graduate Cooperative Education",
+      "credits": "1",
+      "sections": {
+        "01": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9306",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        }
+      }
+    },
+    "CSCI 543": {
+      "className": "Machine Learning",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "35",
+          "room": "UND ONLINE",
+          "waitSize": "0",
+          "enrollment": "12",
+          "days": "",
+          "number": "10361",
+          "time": "TBA",
+          "instructor": "Delhommelle, J"
+        },
+        "01": {
+          "capacity": "20",
+          "room": "LENRD 211",
+          "waitSize": "0",
+          "enrollment": "18",
+          "days": "T",
+          "number": "10360",
+          "time": "5:30p-8:00p",
+          "instructor": "Delhommelle, J"
+        }
+      }
+    },
+    "CSCI 554": {
+      "className": "Computational Intelligence",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "2",
+          "days": "",
+          "number": "17246",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "01": {
+          "capacity": "32",
+          "room": "HARRI 217",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "M",
+          "number": "17245",
+          "time": "5:30p-8:00p",
+          "instructor": "Kim, M"
+        }
+      }
+    },
+    "CSCI 562": {
+      "className": "Formal Specification Methods",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "3",
+          "days": "",
+          "number": "17240",
+          "time": "TBA",
+          "instructor": "Grant, E"
+        },
+        "01": {
+          "capacity": "29",
+          "room": "HARRI 108",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "MWF",
+          "number": "17239",
+          "time": "3:35p-4:25p",
+          "instructor": "Grant, E"
+        }
+      }
+    },
+    "CSCI 599": {
+      "className": "Research",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9276",
+          "time": "TBA",
+          "instructor": "Grant, E"
+        },
+        "03": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9277",
+          "time": "TBA",
+          "instructor": "Hu, W"
+        },
+        "01": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9275",
+          "time": "TBA",
+          "instructor": "Marsh, R"
+        },
+        "06": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9280",
+          "time": "TBA",
+          "instructor": ""
+        },
+        "07": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "9281",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        },
+        "04": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "9278",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "05": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9279",
+          "time": "TBA",
+          "instructor": "Liu, J"
+        },
+        "08": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9282",
+          "time": "TBA",
+          "instructor": ""
+        }
+      }
+    },
+    "CSCI 998": {
+      "className": "Thesis",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9288",
+          "time": "TBA",
+          "instructor": "Hu, W"
+        },
+        "03": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9289",
+          "time": "TBA",
+          "instructor": "Marsh, R"
+        },
+        "01": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9287",
+          "time": "TBA",
+          "instructor": "Grant, E"
+        },
+        "06": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9292",
+          "time": "TBA",
+          "instructor": "Liu, J"
+        },
+        "07": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "2",
+          "days": "",
+          "number": "9293",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        },
+        "04": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9290",
+          "time": "TBA",
+          "instructor": ""
+        },
+        "05": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9291",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "08": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "2",
+          "days": "",
+          "number": "9294",
+          "time": "TBA",
+          "instructor": "Ranganathan, P"
+        },
+        "09": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9299",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "10": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "21244",
+          "time": "TBA",
+          "instructor": "Kaabouch, N"
+        }
+      }
+    },
+    "CSCI 999": {
+      "className": "Dissertation Research",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "21130",
+          "time": "TBA",
+          "instructor": "Grant, E"
+        },
+        "03": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "21196",
+          "time": "TBA",
+          "instructor": "Kaabouch, N"
+        },
+        "01": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "21054",
+          "time": "TBA",
+          "instructor": "Ranganathan, P"
+        },
+        "04": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "21241",
+          "time": "TBA",
+          "instructor": "Marsh, R"
+        },
+        "05": {
+          "capacity": "7",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "2",
+          "days": "",
+          "number": "21261",
+          "time": "TBA",
+          "instructor": "Reza, H"
+        }
+      }
+    },
+    "EE   101": {
+      "className": "Intro Electrical Engineering",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "39",
+          "days": "",
+          "number": "9226",
+          "time": "TBA",
+          "instructor": "Mardani, M"
+        },
+        "01": {
+          "capacity": "25",
+          "room": "UPS2 263",
+          "waitSize": "5",
+          "enrollment": "12",
+          "days": "R",
+          "number": "9196",
+          "time": "11:00a-12:15",
+          "instructor": "Mardani, M"
+        }
+      }
+    },
+    "EE   201": {
+      "className": "Intro to Digital Electronics",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "42",
+          "days": "",
+          "number": "9212",
+          "time": "TBA",
+          "instructor": "Elsaharty, M"
+        },
+        "01": {
+          "capacity": "75",
+          "room": "LENRD 109",
+          "waitSize": "15",
+          "enrollment": "36",
+          "days": "MWF",
+          "number": "9197",
+          "time": "2:30p-3:20p",
+          "instructor": "Elsaharty, M"
+        }
+      }
+    },
+    "EE   201L": {
+      "className": "Digital Electronics Lab",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "75",
+          "room": "LENRD 109",
+          "waitSize": "15",
+          "enrollment": "35",
+          "days": "MW",
+          "number": "9198",
+          "time": "3:35p-4:25p",
+          "instructor": "Mardani, M"
+        },
+        "04": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "42",
+          "days": "",
+          "number": "9213",
+          "time": "TBA",
+          "instructor": "Mardani, M"
+        }
+      }
+    },
+    "EE   206": {
+      "className": "Circuit Analysis",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "27",
+          "days": "",
+          "number": "9255",
+          "time": "TBA",
+          "instructor": "Polat, E"
+        },
+        "01": {
+          "capacity": "30",
+          "room": "HARRI 217",
+          "waitSize": "10",
+          "enrollment": "12",
+          "days": "MWF",
+          "number": "9254",
+          "time": "11:15a-12:05",
+          "instructor": "Polat, E"
+        }
+      }
+    },
+    "EE   206L": {
+      "className": "Circuits Laboratory I",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "25",
+          "days": "",
+          "number": "9257",
+          "time": "TBA",
+          "instructor": "Polat, E"
+        },
+        "01": {
+          "capacity": "30",
+          "room": "UPS2 263",
+          "waitSize": "10",
+          "enrollment": "8",
+          "days": "MW",
+          "number": "9256",
+          "time": "12:20-1:10p",
+          "instructor": "Polat, E"
+        }
+      }
+    },
+    "EE   313": {
+      "className": "Linear Electric Circuits",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "18",
+          "days": "",
+          "number": "9214",
+          "time": "TBA",
+          "instructor": "Selvaraj, D"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "CECOMP 205",
+          "waitSize": "10",
+          "enrollment": "9",
+          "days": "TR",
+          "number": "9199",
+          "time": "11:00a-12:15",
+          "instructor": "Selvaraj, D"
+        }
+      }
+    },
+    "EE   313L": {
+      "className": "Circuits Laboratory II",
+      "credits": "1",
+      "sections": {
+        "03": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "22",
+          "days": "",
+          "number": "9229",
+          "time": "TBA",
+          "instructor": "Selvaraj, D"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "HARRI 204",
+          "waitSize": "10",
+          "enrollment": "5",
+          "days": "TR",
+          "number": "9209",
+          "time": "3:00p-3:50p",
+          "instructor": "Selvaraj, D"
+        }
+      }
+    },
+    "EE   314": {
+      "className": "Signals and Systems",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "12",
+          "days": "",
+          "number": "9340",
+          "time": "TBA",
+          "instructor": "Elderini, T"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "LENRD 100",
+          "waitSize": "10",
+          "enrollment": "7",
+          "days": "TR",
+          "number": "9339",
+          "time": "9:30a-10:45a",
+          "instructor": "Elderini, T"
+        }
+      }
+    },
+    "EE   314L": {
+      "className": "Signal and Systems Laboratory",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "13",
+          "days": "",
+          "number": "9342",
+          "time": "TBA",
+          "instructor": "Elderini, T"
+        },
+        "01": {
+          "capacity": "35",
+          "room": "CECOMP 205",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "TR",
+          "number": "9341",
+          "time": "12:30-1:20p",
+          "instructor": "Elderini, T"
+        }
+      }
+    },
+    "EE   316": {
+      "className": "Electric & Magnetic Fields",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "12",
+          "days": "",
+          "number": "9259",
+          "time": "TBA",
+          "instructor": "Elsaharty, M"
+        },
+        "01": {
+          "capacity": "29",
+          "room": "HARRI 108",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "MWF",
+          "number": "9258",
+          "time": "12:20-1:10p",
+          "instructor": "Elsaharty, M"
+        }
+      }
+    },
+    "EE   397": {
+      "className": "Cooperative Education",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "5",
+          "days": "",
+          "number": "9241",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        },
+        "01": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9240",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        }
+      }
+    },
+    "EE   401": {
+      "className": "Electric Drives",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "13",
+          "days": "",
+          "number": "9217",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "HARRI 218",
+          "waitSize": "10",
+          "enrollment": "16",
+          "days": "TR",
+          "number": "9200",
+          "time": "11:00a-12:15",
+          "instructor": "Salehfar, H"
+        }
+      }
+    },
+    "EE   401L": {
+      "className": "Electric Drives Laboratory",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "17",
+          "days": "",
+          "number": "9246",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "",
+          "waitSize": "10",
+          "enrollment": "12",
+          "days": "",
+          "number": "9245",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        }
+      }
+    },
+    "EE   405": {
+      "className": "Control Systems I",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "20",
+          "days": "",
+          "number": "9218",
+          "time": "TBA",
+          "instructor": "Elderini, T"
+        },
+        "01": {
+          "capacity": "32",
+          "room": "CECOMP 209",
+          "waitSize": "10",
+          "enrollment": "15",
+          "days": "MWF",
+          "number": "9201",
+          "time": "11:15a-12:05",
+          "instructor": "Elderini, T"
+        }
+      }
+    },
+    "EE   405L": {
+      "className": "Control Systems Laboratory",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "19",
+          "days": "",
+          "number": "9248",
+          "time": "TBA",
+          "instructor": "Elderini, T"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "LENRD 112",
+          "waitSize": "10",
+          "enrollment": "14",
+          "days": "TR",
+          "number": "9247",
+          "time": "12:30-1:20p",
+          "instructor": "Elderini, T"
+        }
+      }
+    },
+    "EE   409": {
+      "className": "Distributed Networks",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "21",
+          "days": "",
+          "number": "9222",
+          "time": "TBA",
+          "instructor": "Kim, M"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "ED 113",
+          "waitSize": "20",
+          "enrollment": "21",
+          "days": "MWF",
+          "number": "9202",
+          "time": "1:25p-2:15p",
+          "instructor": "Kim, M"
+        }
+      }
+    },
+    "EE   421": {
+      "className": "Electronics II",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "35",
+          "room": "UND ONLINE",
+          "waitSize": "10",
+          "enrollment": "14",
+          "days": "",
+          "number": "9223",
+          "time": "TBA",
+          "instructor": "Elsaharty, M"
+        },
+        "01": {
+          "capacity": "30",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "19",
+          "days": "MWF",
+          "number": "9203",
+          "time": "10:10a-11:00a",
+          "instructor": "Elsaharty, M"
+        }
+      }
+    },
+    "EE   421L": {
+      "className": "Electronics Lab II",
+      "credits": "1",
+      "sections": {
+        "03": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "17",
+          "days": "",
+          "number": "9252",
+          "time": "TBA",
+          "instructor": "Elsaharty, M"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "HARRI 217",
+          "waitSize": "10",
+          "enrollment": "18",
+          "days": "TR",
+          "number": "9210",
+          "time": "5:00p-5:50p",
+          "instructor": "Elsaharty, M"
+        }
+      }
+    },
+    "EE   452": {
+      "className": "Embedded Systems",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "14",
+          "days": "",
+          "number": "9224",
+          "time": "TBA",
+          "instructor": "Elderini, T"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "HARRI 217",
+          "waitSize": "10",
+          "enrollment": "18",
+          "days": "MWF",
+          "number": "9204",
+          "time": "3:35p-4:25p",
+          "instructor": "Elderini, T"
+        }
+      }
+    },
+    "EE   452L": {
+      "className": "Embedded Sys. Lab",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "13",
+          "days": "",
+          "number": "9250",
+          "time": "TBA",
+          "instructor": "Elderini, T"
+        },
+        "01": {
+          "capacity": "36",
+          "room": "HARRI 217",
+          "waitSize": "10",
+          "enrollment": "19",
+          "days": "MW",
+          "number": "9249",
+          "time": "12:20-1:10p",
+          "instructor": "Elderini, T"
+        }
+      }
+    },
+    "EE   481": {
+      "className": "Senior Design II",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "12",
+          "days": "",
+          "number": "9215",
+          "time": "TBA",
+          "instructor": "Ranganathan, P"
+        },
+        "01": {
+          "capacity": "40",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "16",
+          "days": "TR",
+          "number": "9205",
+          "time": "3:30p-4:45p",
+          "instructor": "Ranganathan, P"
+        }
+      }
+    },
+    "EE   481H": {
+      "className": "Senior Design II",
+      "credits": "3",
+      "sections": {
+        "03": {
+          "capacity": "5",
+          "room": "HARRI 324",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "TR",
+          "number": "18118",
+          "time": "3:30p-4:45p",
+          "instructor": "Ranganathan, P"
+        }
+      }
+    },
+    "EE   490": {
+      "className": "Electrical Engineering Prob",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9207",
+          "time": "TBA",
+          "instructor": "Kaabouch, N"
+        },
+        "03": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9211",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        },
+        "01": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9206",
+          "time": "TBA",
+          "instructor": "Faruque, S"
+        },
+        "06": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "0",
+          "days": "",
+          "number": "9253",
+          "time": "TBA",
+          "instructor": "Adams, R"
+        },
+        "07": {
+          "capacity": "20",
+          "room": "HARRI 204",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "MWF",
+          "number": "17247",
+          "time": "11:15a-12:05",
+          "instructor": "Selvaraj, D"
+        },
+        "04": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "5",
+          "enrollment": "0",
+          "days": "",
+          "number": "9225",
+          "time": "TBA",
+          "instructor": "Ranganathan, P"
+        },
+        "05": {
+          "capacity": "10",
+          "room": "HARRI 204",
+          "waitSize": "5",
+          "enrollment": "2",
+          "days": "TR",
+          "number": "9227",
+          "time": "9:30a-10:45a",
+          "instructor": "Adams, R"
+        },
+        "08": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "2",
+          "days": "",
+          "number": "17248",
+          "time": "TBA",
+          "instructor": "Selvaraj, D"
+        }
+      }
+    },
+    "EE   521": {
+      "className": "Digital Signal Processing",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "5",
+          "days": "",
+          "number": "17256",
+          "time": "TBA",
+          "instructor": "Polat, E"
+        },
+        "01": {
+          "capacity": "25",
+          "room": "UPS2 261",
+          "waitSize": "5",
+          "enrollment": "2",
+          "days": "MWF",
+          "number": "17255",
+          "time": "2:30p-3:20p",
+          "instructor": "Polat, E"
+        }
+      }
+    },
+    "EE   522": {
+      "className": "Renewable Energy Systems",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "14",
+          "days": "",
+          "number": "17254",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        },
+        "01": {
+          "capacity": "50",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "TR",
+          "number": "17253",
+          "time": "2:00p-3:15p",
+          "instructor": "Salehfar, H"
+        }
+      }
+    },
+    "EE   524": {
+      "className": "Appl Specif Integ Circuit Dsgn",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "100",
+          "room": "UND ONLINE",
+          "waitSize": "20",
+          "enrollment": "5",
+          "days": "",
+          "number": "17250",
+          "time": "TBA",
+          "instructor": "Faruque, S"
+        },
+        "01": {
+          "capacity": "30",
+          "room": "HARRI 324",
+          "waitSize": "10",
+          "enrollment": "4",
+          "days": "MWF",
+          "number": "17249",
+          "time": "12:20-1:10p",
+          "instructor": "Faruque, S"
+        }
+      }
+    },
+    "EE   595": {
+      "className": "Design Project",
+      "credits": "3",
+      "sections": {
+        "02": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9216",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        },
+        "03": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9242",
+          "time": "TBA",
+          "instructor": "Kaabouch, N"
+        },
+        "01": {
+          "capacity": "0",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9208",
+          "time": "TBA",
+          "instructor": "Faruque, S"
+        },
+        "04": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9243",
+          "time": "TBA",
+          "instructor": "Ranganathan, P"
+        },
+        "05": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9244",
+          "time": "TBA",
+          "instructor": "Tavakolian, K"
+        }
+      }
+    },
+    "EE   599": {
+      "className": "EE Doctoral Research",
+      "credits": "1",
+      "sections": {
+        "02": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9231",
+          "time": "TBA",
+          "instructor": "Faruque, S"
+        },
+        "03": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9232",
+          "time": "TBA",
+          "instructor": "Kaabouch, N"
+        },
+        "01": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "9230",
+          "time": "TBA",
+          "instructor": "Ranganathan, P"
+        },
+        "06": {
+          "capacity": "5",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "21105",
+          "time": "TBA",
+          "instructor": "Liang, B"
+        },
+        "07": {
+          "capacity": "5",
+          "room": "UND ONLINE",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "21104",
+          "time": "TBA",
+          "instructor": "Liang, B"
+        },
+        "04": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "0",
+          "days": "",
+          "number": "9233",
+          "time": "TBA",
+          "instructor": "Tavakolian, K"
+        },
+        "05": {
+          "capacity": "10",
+          "room": "",
+          "waitSize": "0",
+          "enrollment": "1",
+          "days": "",
+          "number": "9234",
+          "time": "TBA",
+          "instructor": "Salehfar, H"
+        }
+      }
+    },
+    "EE   601": {
+      "className": "Analytical Cyber Foundations",
+      "credits": "3",
+      "sections": {
+        "01": {
+          "capacity": "60",
+          "room": "UND ONLINE",
+          "waitSize": "0",
+          "enrollment": "6",
+          "days": "",
+          "number": "15050",
+          "time": "TBA",
+          "instructor": "Bartz, J"
+        }
+      }
+    },
+    "EE 602": {
+      "className": "Cyber Computing Foundations",
+      "credits": "3",
+      "sections": {
+        "01": {
+          "capacity": "60",
+          "room": "UND ONLINE",
+          "waitSize": "0",
+          "enrollment": "13",
+          "days": "",
+          "number": "20589",
+          "time": "TBA",
+          "instructor": "Stokke, T"
+        }
+      }
+    }
+  }
+]

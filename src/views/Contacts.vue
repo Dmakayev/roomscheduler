@@ -39,7 +39,7 @@ export default {
         },
         { text: "First Name", value: "firstName" },
         { text: "Email", value: "email" },
-        { text: "", value: "actions", sortable: false },
+        { text: "Copy Email", value: "actions", sortable: false },
         { text: "Phone", value: "phone" },
         { text: "Department", value: "department" },
         { text: "Title", value: "title" },
@@ -53,12 +53,6 @@ export default {
       axios.get("http://127.0.0.1:8000/FacultyNames").then((response) => {
         this.faculty = response.data;
       });
-
-      ///////// THIS IS FOR LOCAL JSON USE
-      // fetch("./Contacts.json")
-      //   .then((response) => response.json())
-      //   .then((data) => (this.faculty = data));
-      // console.log(this.faculty);
     },
     copyEmail(item) {
       console.log(item.email);

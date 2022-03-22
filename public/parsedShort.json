@@ -1,0 +1,100 @@
+[
+  {
+    "className": "Introduction to Computers",
+    "classNumber": "CSCI 101",
+    "credits": "3",
+    "sections": [
+      {
+        "sectionNumber": "02",
+        "capacity": "150",
+        "room": "UND ONLINE",
+        "waitSize": "20",
+        "enrollment": "35",
+        "days": "",
+        "number": "9297",
+        "time": "TBA",
+        "instructor": ""
+      },
+      {
+        "sectionNumber": "01",
+        "capacity": "28",
+        "room": "LENRD110",
+        "waitSize": "10",
+        "enrollment": "14",
+        "days": "MWF",
+        "number": "9286",
+        "time": "1:25p-2:15p",
+        "instructor": ""
+      }
+    ]
+  },
+   {
+    "classNumber": "CSCI 110",
+    "className": "Intro to Computer Science",
+    "credits": "3",
+    "sections": [
+      {
+        "sectionNumber": "02",
+        "capacity": "100",
+        "room": "UND ONLINE",
+        "waitSize": "20",
+        "enrollment": "11",
+        "days": "",
+        "number": "9316",
+        "time": "TBA",
+        "instructor": "Stokke, T"
+      },
+       {
+        "sectionNumber": "01",
+        "capacity": "32",
+        "room": "CECOMP 209",
+        "waitSize": "10",
+        "enrollment": "5",
+        "days": "TR",
+        "number": "9309",
+        "time": "9:30a-10:45a",
+        "instructor": "Stokke, T"
+      }
+    ]
+  },
+   {
+    "classNumber": "CSCI 130",
+    "className": "Intro Scientific Programming",
+    "credits": "4",
+    "sections": [
+      {
+        "sectionNumber": "02",
+        "capacity": "35",
+        "room": "HARRI 324",
+        "waitSize": "10",
+        "enrollment": "4",
+        "days": "MWF",
+        "number": "10211",
+        "time": "2:30p-3:20p",
+        "instructor": "Nordlie, J"
+      },
+      {
+        "sectionNumber": "03",
+        "capacity": "36",
+        "room": "UND ONLINE",
+        "waitSize": "10",
+        "enrollment": "29",
+        "days": "",
+        "number": "10212",
+        "time": "TBA",
+        "instructor": "Nordlie, J"
+      },
+      {
+        "sectionNumber": "01",
+        "capacity": "36",
+        "room": "HARRI 324",
+        "waitSize": "10",
+        "enrollment": "10",
+        "days": "MWF",
+        "number": "10210",
+        "time": "2:30p-3:20p",
+        "instructor": "Nordlie, J"
+      }
+    ]
+  }
+]

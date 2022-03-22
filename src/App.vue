@@ -48,9 +48,10 @@
         <v-btn class="mx-2" depressed elevation="2" to="/cs-courses"
           >CS Courses
         </v-btn>
-        <v-btn class="mx-2" depressed elevation="2" to="/help"
-        >Help
+        <v-btn class="mx-2" depressed elevation="2" to="/submitSchedule"
+          >Submit Schedule
         </v-btn>
+        <v-btn class="mx-2" depressed elevation="2" to="/help">Help </v-btn>
       </div>
       <router-view />
     </v-main>
