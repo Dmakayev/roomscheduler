@@ -9,6 +9,7 @@ import DeadEnd from "@/views/DeadEnd";
 import Requests from "@/views/Requests";
 import Help from "@/views/Help";
 import Login from "@/views/Login";
+import SubmitSchedule from "@/views/SubmitSchedule";
 
 Vue.use(VueRouter);
 
@@ -32,6 +33,11 @@ const routes = [
     path: "/cs-courses",
     name: "Computer Science Courses",
     component: CompSciCourses,
+  },
+  {
+    path: "/submitSchedule",
+    name: "Submit Schedule",
+    component: SubmitSchedule,
   },
   {
     path: "/ee-courses",

@@ -154,16 +154,6 @@ export default {
       "#FF9800",
       "#757575",
     ],
-    names: [
-      "Meeting",
-      "Holiday",
-      "PTO",
-      "Travel",
-      "Event",
-      "Birthday",
-      "Conference",
-      "Party",
-    ],
     dragEvent: null,
     dragStart: null,
     createEvent: null,
@@ -296,32 +286,6 @@ export default {
         ? `rgba(${r}, ${g}, ${b}, 0.7)`
         : event.color;
     },
-    // getEvents ({ start, end }) {
-    //   const events = []
-    //
-    //   const min = new Date(`${start.date}T00:00:00`).getTime()
-    //   const max = new Date(`${end.date}T23:59:59`).getTime()
-    //   const days = (max - min) / 86400000
-    //   const eventCount = this.rnd(days, days + 20)
-    //
-    //   for (let i = 0; i < eventCount; i++) {
-    //     const timed = this.rnd(0, 3) !== 0
-    //     const firstTimestamp = this.rnd(min, max)
-    //     const secondTimestamp = this.rnd(2, timed ? 8 : 288) * 900000
-    //     const start = firstTimestamp - (firstTimestamp % 900000)
-    //     const end = start + secondTimestamp
-    //
-    //     events.push({
-    //       name: this.rndElement(this.names),
-    //       color: this.rndElement(this.colors),
-    //       start,
-    //       end,
-    //       timed,
-    //     })
-    //   }
-    //
-    //   this.events = events
-    // },
 
     rndElement(arr) {
       return arr[this.rnd(0, arr.length - 1)];
@@ -330,10 +294,6 @@ export default {
       axios.get("http://127.0.0.1:8000/FacultyNames").then((response) => {
         this.facultyList = response.data;
       });
-
-      // fetch("./Contacts.json")
-      //   .then((response) => response.json())
-      //   .then((data) => (this.facultyList = data));
     },
 
     getClassData() {
@@ -389,7 +349,6 @@ export default {
         const second = new Date(first.getTime() + secondTimestamp);
 
         events.push({
-          name: this.names[this.rnd(0, this.names.length - 1)],
           start: first,
           end: second,
           color: this.colors[this.rnd(0, this.colors.length - 1)],
