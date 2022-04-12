@@ -133,8 +133,7 @@ export default {
   }),
   methods: {
     getClassData() {
-      fetch("./parsedShort.json")
-        // fetch("./ParsedList.json")
+      fetch("./test4.json")
         .then((response) => response.json())
         .then((data) => (this.classes = data));
     },
