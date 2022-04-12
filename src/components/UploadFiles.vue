@@ -15,6 +15,7 @@
     <v-row no-gutters justify="center" align="center">
       <v-col cols="8">
         <v-file-input
+          accept=".pdf"
           show-size
           label="File input"
           @change="selectFile"
@@ -45,12 +46,10 @@
 
 <script>
 import UploadFileService from "@/services/UploadFileService";
-
 export default {
-  name: "SubmitSchedule",
+  name: "upload-files",
   data() {
     return {
-      selectedFiles: undefined,
       currentFile: undefined,
       progress: 0,
       message: "",
@@ -58,12 +57,16 @@ export default {
     };
   },
   methods: {
-    selectFile() {
-      this.selectedFiles = this.$refs.file.files;
+    selectFile(file) {
+      this.progress = 0;
+      this.currentFile = file;
     },
     upload() {
-      this.progress = 0;
-      this.currentFile = this.selectedFiles.item(0);
+      if (!this.currentFile) {
+        this.message = "Please select a file!";
+        return;
+      }
+      this.message = "";
       UploadFileService.upload(this.currentFile, (event) => {
         this.progress = Math.round((100 * event.loaded) / event.total);
       })
@@ -79,7 +82,6 @@ export default {
           this.message = "Could not upload the file!";
           this.currentFile = undefined;
         });
-      this.selectedFiles = undefined;
     },
   },
   mounted() {
