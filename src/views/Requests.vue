@@ -97,9 +97,6 @@
                   <v-list-item @click="displayTypes = 'month'">
                     <v-list-item-title>Month</v-list-item-title>
                   </v-list-item>
-                  <v-list-item @click="displayTypes = '4day'">
-                    <v-list-item-title>4 days</v-list-item-title>
-                  </v-list-item>
                 </v-list>
               </v-menu>
             </v-toolbar>
@@ -121,6 +118,7 @@
               @mousemove:time="mouseMove"
               @mouseup:time="endDrag"
               @mouseleave.native="cancelDrag"
+              @change="updateRange"
             >
               <template v-slot:event="{ event, timed, eventSummary }">
                 <div class="v-event-draggable" v-html="eventSummary()"></div>
@@ -140,6 +138,7 @@
 
 <script>
 import axios from "axios";
+import moment from "moment";
 
 export default {
   data: () => ({
@@ -154,16 +153,6 @@ export default {
       "#FF9800",
       "#757575",
     ],
-    names: [
-      "Meeting",
-      "Holiday",
-      "PTO",
-      "Travel",
-      "Event",
-      "Birthday",
-      "Conference",
-      "Party",
-    ],
     dragEvent: null,
     dragStart: null,
     createEvent: null,
@@ -173,6 +162,7 @@ export default {
     selectClass: { department: "Null", num: "Null", name: "Null" },
     facultyList: [],
     classList: [],
+    classes: [],
     focus: "",
     displayTypes: "week",
     typeToLabel: {
@@ -189,6 +179,12 @@ export default {
     },
   }),
   methods: {
+    getCourseData() {
+      fetch("./parsedShort.json")
+        // fetch("./ParsedList.json")
+        .then((response) => response.json())
+        .then((data) => (this.classes = data));
+    },
     startDrag({ event, timed }) {
       if (event && timed) {
         this.dragEvent = event;
@@ -296,32 +292,6 @@ export default {
         ? `rgba(${r}, ${g}, ${b}, 0.7)`
         : event.color;
     },
-    // getEvents ({ start, end }) {
-    //   const events = []
-    //
-    //   const min = new Date(`${start.date}T00:00:00`).getTime()
-    //   const max = new Date(`${end.date}T23:59:59`).getTime()
-    //   const days = (max - min) / 86400000
-    //   const eventCount = this.rnd(days, days + 20)
-    //
-    //   for (let i = 0; i < eventCount; i++) {
-    //     const timed = this.rnd(0, 3) !== 0
-    //     const firstTimestamp = this.rnd(min, max)
-    //     const secondTimestamp = this.rnd(2, timed ? 8 : 288) * 900000
-    //     const start = firstTimestamp - (firstTimestamp % 900000)
-    //     const end = start + secondTimestamp
-    //
-    //     events.push({
-    //       name: this.rndElement(this.names),
-    //       color: this.rndElement(this.colors),
-    //       start,
-    //       end,
-    //       timed,
-    //     })
-    //   }
-    //
-    //   this.events = events
-    // },
 
     rndElement(arr) {
       return arr[this.rnd(0, arr.length - 1)];
@@ -330,10 +300,6 @@ export default {
       axios.get("http://127.0.0.1:8000/FacultyNames").then((response) => {
         this.facultyList = response.data;
       });
-
-      // fetch("./Contacts.json")
-      //   .then((response) => response.json())
-      //   .then((data) => (this.facultyList = data));
     },
 
     getClassData() {
@@ -373,29 +339,167 @@ export default {
 
       nativeEvent.stopPropagation();
     },
-    updateRange({ start, end }) {
+    updateRange() {
       const events = [];
-
-      const min = new Date(`${start.date}T00:00:00`);
-      const max = new Date(`${end.date}T23:59:59`);
-      const days = (max.getTime() - min.getTime()) / 86400000;
-      const eventCount = this.rnd(days, days + 20);
-
-      for (let i = 0; i < eventCount; i++) {
-        const allDay = this.rnd(0, 3) === 0;
-        const firstTimestamp = this.rnd(min.getTime(), max.getTime());
-        const first = new Date(firstTimestamp - (firstTimestamp % 900000));
-        const secondTimestamp = this.rnd(2, allDay ? 288 : 8) * 900000;
-        const second = new Date(first.getTime() + secondTimestamp);
-
-        events.push({
-          name: this.names[this.rnd(0, this.names.length - 1)],
-          start: first,
-          end: second,
-          color: this.colors[this.rnd(0, this.colors.length - 1)],
-          timed: !allDay,
+      const allDay = this.rnd(0, 3) === 0;
+      this.classes.forEach((item) => {
+        item.sections.forEach((sectionItem) => {
+          if (sectionItem.time !== "TBA") {
+            const timeArray = sectionItem.time.split("-");
+            const startTime = moment(timeArray[0], ["h:mm A"]).format("HH:mm");
+            const endTime = moment(timeArray[1], ["h:mm A"]).format("HH:mm");
+            const eventColor = this.colors[this.rnd(0, this.colors.length - 1)];
+            const semesterStartDate = new Date(2022, 0, 10); //MANUAL DATES FOR SPRING 2022
+            const semesterEndDate = new Date(2022, 4, 16); //MANUAL DATES FOR SPRING 2022
+            const dayArray = sectionItem.days.split("");
+            if (sectionItem.days !== "") {
+              let loop = new Date(semesterStartDate);
+              while (loop <= semesterEndDate) {
+                dayArray.forEach((days) => {
+                  if (days === "M" && loop.getDay() === 1) {
+                    events.push({
+                      name: item.classNumber + " " + item.className,
+                      details: "Credits: " + item.credits,
+                      room: "Room: " + sectionItem.room,
+                      instructor: "Instructor: " + sectionItem.instructor,
+                      sectionNum: "Section: " + sectionItem.sectionNumber,
+                      sectionTime: sectionItem.time,
+                      start:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        startTime,
+                      end:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        endTime,
+                      color: eventColor,
+                      timed: !allDay,
+                    });
+                  } else if (days === "T" && loop.getDay() === 2) {
+                    events.push({
+                      name: item.classNumber + " " + item.className,
+                      details: "Credits: " + item.credits,
+                      room: "Room: " + sectionItem.room,
+                      instructor: "Instructor: " + sectionItem.instructor,
+                      sectionNum: "Section: " + sectionItem.sectionNumber,
+                      sectionTime: sectionItem.time,
+                      start:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        startTime,
+                      end:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        endTime,
+                      color: eventColor,
+                      timed: !allDay,
+                    });
+                  } else if (days === "W" && loop.getDay() === 3) {
+                    events.push({
+                      name: item.classNumber + " " + item.className,
+                      details: "Credits: " + item.credits,
+                      room: "Room: " + sectionItem.room,
+                      instructor: "Instructor: " + sectionItem.instructor,
+                      sectionNum: "Section: " + sectionItem.sectionNumber,
+                      sectionTime: sectionItem.time,
+                      start:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        startTime,
+                      end:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        endTime,
+                      color: eventColor,
+                      timed: !allDay,
+                    });
+                  } else if (days === "R" && loop.getDay() === 4) {
+                    events.push({
+                      name: item.classNumber + " " + item.className,
+                      details: "Credits: " + item.credits,
+                      room: "Room: " + sectionItem.room,
+                      instructor: "Instructor: " + sectionItem.instructor,
+                      sectionNum: "Section: " + sectionItem.sectionNumber,
+                      sectionTime: sectionItem.time,
+                      start:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        startTime,
+                      end:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        endTime,
+                      color: eventColor,
+                      timed: !allDay,
+                    });
+                  } else if (days === "F" && loop.getDay() === 5) {
+                    events.push({
+                      name: item.classNumber + " " + item.className,
+                      details: "Credits: " + item.credits,
+                      room: "Room: " + sectionItem.room,
+                      instructor: "Instructor: " + sectionItem.instructor,
+                      sectionNum: "Section: " + sectionItem.sectionNumber,
+                      sectionTime: sectionItem.time,
+                      start:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        startTime,
+                      end:
+                        loop.getFullYear() +
+                        "-" +
+                        (loop.getMonth() + 1) +
+                        "-" +
+                        loop.getDate() +
+                        " " +
+                        endTime,
+                      color: eventColor,
+                      timed: !allDay,
+                    });
+                  }
+                });
+                let newDate = loop.setDate(loop.getDate() + 1);
+                loop = new Date(newDate);
+              }
+            }
+          }
         });
-      }
+      });
 
       this.events = events;
     },
@@ -406,6 +510,7 @@ export default {
   mounted() {
     this.getNameData();
     this.getClassData();
+    this.getCourseData();
   },
 };
 </script>

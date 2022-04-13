@@ -13,6 +13,24 @@
       </div>
 
       <v-spacer></v-spacer>
+      <v-btn
+        v-if="!loggedIn()"
+        class="ma-2 white--text"
+        depressed
+        elevation="2"
+        to="/login"
+        color="primary"
+        dark
+        >Login</v-btn
+      >
+      <v-btn
+        v-if="loggedIn()"
+        @click="logout"
+        class="ma-2"
+        color="primary"
+        dark
+        >Sign Out</v-btn
+      >
     </v-app-bar>
 
     <v-main>
@@ -30,12 +48,10 @@
         <v-btn class="mx-2" depressed elevation="2" to="/cs-courses"
           >CS Courses
         </v-btn>
-        <v-btn class="mx-2" depressed elevation="2" to="/ee-courses"
-          >EE Courses
+        <v-btn class="mx-2" depressed elevation="2" to="/submitSchedule"
+          >Submit Schedule
         </v-btn>
-        <v-btn class="mx-2" depressed elevation="2" to="/factory-center"
-          >Factory Center
-        </v-btn>
+        <v-btn class="mx-2" depressed elevation="2" to="/help">Help </v-btn>
       </div>
       <router-view />
     </v-main>
@@ -45,9 +61,21 @@
 <script>
 export default {
   name: "App",
-
-  data: () => ({
-    //
-  }),
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$root.$refs.loggedIn = false
+      this.$router.push({ name: "Login" });
+    },
+    loggedIn() {
+      if(localStorage.getItem("user-info") == null){
+        return false
+      }
+      return true
+    }
+  },
+  mounted(){
+    this.loggedIn()
+  }
 };
 </script>
