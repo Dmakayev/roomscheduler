@@ -96,6 +96,7 @@
 
 <script>
 import moment from "moment";
+import axios from "axios";
 
 export default {
   data: () => ({
@@ -133,9 +134,9 @@ export default {
   }),
   methods: {
     getClassData() {
-      fetch("./test4.json")
-        .then((response) => response.json())
-        .then((data) => (this.classes = data));
+      axios.get("http://127.0.0.1:8000/courses").then((response) => {
+        this.classes = response.data;
+      });
     },
     viewDay({ date }) {
       this.focus = date;
@@ -175,162 +176,160 @@ export default {
       const events = [];
       const allDay = this.rnd(0, 3) === 0;
       this.classes.forEach((item) => {
-        item.sections.forEach((sectionItem) => {
-          if (sectionItem.time !== "TBA") {
-            const timeArray = sectionItem.time.split("-");
-            const startTime = moment(timeArray[0], ["h:mm A"]).format("HH:mm");
-            const endTime = moment(timeArray[1], ["h:mm A"]).format("HH:mm");
-            const eventColor = this.colors[this.rnd(0, this.colors.length - 1)];
-            const semesterStartDate = new Date(2022, 0, 10); //MANUAL DATES FOR SPRING 2022
-            const semesterEndDate = new Date(2022, 4, 16); //MANUAL DATES FOR SPRING 2022
-            const dayArray = sectionItem.days.split("");
-            if (sectionItem.days !== "") {
-              let loop = new Date(semesterStartDate);
-              while (loop <= semesterEndDate) {
-                dayArray.forEach((days) => {
-                  if (days === "M" && loop.getDay() === 1) {
-                    events.push({
-                      name: item.classNumber + " " + item.className,
-                      details: "Credits: " + item.credits,
-                      room: "Room: " + sectionItem.room,
-                      instructor: "Instructor: " + sectionItem.instructor,
-                      sectionNum: "Section: " + sectionItem.sectionNumber,
-                      sectionTime: sectionItem.time,
-                      start:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        startTime,
-                      end:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        endTime,
-                      color: eventColor,
-                      timed: !allDay,
-                    });
-                  } else if (days === "T" && loop.getDay() === 2) {
-                    events.push({
-                      name: item.classNumber + " " + item.className,
-                      details: "Credits: " + item.credits,
-                      room: "Room: " + sectionItem.room,
-                      instructor: "Instructor: " + sectionItem.instructor,
-                      sectionNum: "Section: " + sectionItem.sectionNumber,
-                      sectionTime: sectionItem.time,
-                      start:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        startTime,
-                      end:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        endTime,
-                      color: eventColor,
-                      timed: !allDay,
-                    });
-                  } else if (days === "W" && loop.getDay() === 3) {
-                    events.push({
-                      name: item.classNumber + " " + item.className,
-                      details: "Credits: " + item.credits,
-                      room: "Room: " + sectionItem.room,
-                      instructor: "Instructor: " + sectionItem.instructor,
-                      sectionNum: "Section: " + sectionItem.sectionNumber,
-                      sectionTime: sectionItem.time,
-                      start:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        startTime,
-                      end:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        endTime,
-                      color: eventColor,
-                      timed: !allDay,
-                    });
-                  } else if (days === "R" && loop.getDay() === 4) {
-                    events.push({
-                      name: item.classNumber + " " + item.className,
-                      details: "Credits: " + item.credits,
-                      room: "Room: " + sectionItem.room,
-                      instructor: "Instructor: " + sectionItem.instructor,
-                      sectionNum: "Section: " + sectionItem.sectionNumber,
-                      sectionTime: sectionItem.time,
-                      start:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        startTime,
-                      end:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        endTime,
-                      color: eventColor,
-                      timed: !allDay,
-                    });
-                  } else if (days === "F" && loop.getDay() === 5) {
-                    events.push({
-                      name: item.classNumber + " " + item.className,
-                      details: "Credits: " + item.credits,
-                      room: "Room: " + sectionItem.room,
-                      instructor: "Instructor: " + sectionItem.instructor,
-                      sectionNum: "Section: " + sectionItem.sectionNumber,
-                      sectionTime: sectionItem.time,
-                      start:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        startTime,
-                      end:
-                        loop.getFullYear() +
-                        "-" +
-                        (loop.getMonth() + 1) +
-                        "-" +
-                        loop.getDate() +
-                        " " +
-                        endTime,
-                      color: eventColor,
-                      timed: !allDay,
-                    });
-                  }
-                });
-                let newDate = loop.setDate(loop.getDate() + 1);
-                loop = new Date(newDate);
-              }
+        if (item.time !== "TBA") {
+          const timeArray = item.time.split("-");
+          const startTime = moment(timeArray[0], ["h:mm A"]).format("HH:mm");
+          const endTime = moment(timeArray[1], ["h:mm A"]).format("HH:mm");
+          const eventColor = this.colors[this.rnd(0, this.colors.length - 1)];
+          const semesterStartDate = new Date(2022, 0, 10); //MANUAL DATES FOR SPRING 2022
+          const semesterEndDate = new Date(2022, 4, 16); //MANUAL DATES FOR SPRING 2022
+          const dayArray = item.days.split("");
+          if (item.days !== "") {
+            let loop = new Date(semesterStartDate);
+            while (loop <= semesterEndDate) {
+              dayArray.forEach((days) => {
+                if (days === "M" && loop.getDay() === 1) {
+                  events.push({
+                    name: item.classNumber + " " + item.className,
+                    details: "Credits: " + item.credits,
+                    room: "Room: " + item.room,
+                    instructor: "Instructor: " + item.instructor,
+                    sectionNum: "Section: " + item.sectionNumber,
+                    sectionTime: item.time,
+                    start:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      startTime,
+                    end:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      endTime,
+                    color: eventColor,
+                    timed: !allDay,
+                  });
+                } else if (days === "T" && loop.getDay() === 2) {
+                  events.push({
+                    name: item.classNumber + " " + item.className,
+                    details: "Credits: " + item.credits,
+                    room: "Room: " + item.room,
+                    instructor: "Instructor: " + item.instructor,
+                    sectionNum: "Section: " + item.sectionNumber,
+                    sectionTime: item.time,
+                    start:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      startTime,
+                    end:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      endTime,
+                    color: eventColor,
+                    timed: !allDay,
+                  });
+                } else if (days === "W" && loop.getDay() === 3) {
+                  events.push({
+                    name: item.classNumber + " " + item.className,
+                    details: "Credits: " + item.credits,
+                    room: "Room: " + item.room,
+                    instructor: "Instructor: " + item.instructor,
+                    sectionNum: "Section: " + item.sectionNumber,
+                    sectionTime: item.time,
+                    start:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      startTime,
+                    end:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      endTime,
+                    color: eventColor,
+                    timed: !allDay,
+                  });
+                } else if (days === "R" && loop.getDay() === 4) {
+                  events.push({
+                    name: item.classNumber + " " + item.className,
+                    details: "Credits: " + item.credits,
+                    room: "Room: " + item.room,
+                    instructor: "Instructor: " + item.instructor,
+                    sectionNum: "Section: " + item.sectionNumber,
+                    sectionTime: item.time,
+                    start:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      startTime,
+                    end:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      endTime,
+                    color: eventColor,
+                    timed: !allDay,
+                  });
+                } else if (days === "F" && loop.getDay() === 5) {
+                  events.push({
+                    name: item.classNumber + " " + item.className,
+                    details: "Credits: " + item.credits,
+                    room: "Room: " + item.room,
+                    instructor: "Instructor: " + item.instructor,
+                    sectionNum: "Section: " + item.sectionNumber,
+                    sectionTime: item.time,
+                    start:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      startTime,
+                    end:
+                      loop.getFullYear() +
+                      "-" +
+                      (loop.getMonth() + 1) +
+                      "-" +
+                      loop.getDate() +
+                      " " +
+                      endTime,
+                    color: eventColor,
+                    timed: !allDay,
+                  });
+                }
+              });
+              let newDate = loop.setDate(loop.getDate() + 1);
+              loop = new Date(newDate);
             }
           }
-        });
+        }
       });
 
       this.events = events;
