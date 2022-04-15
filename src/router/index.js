@@ -1,26 +1,23 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '@/views/Home.vue'
-import FactoryCenter from "@/views/FactoryCenter";
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "@/views/Home.vue";
 import Contacts from "@/views/Contacts";
 import Calendar from "@/views/Calendar";
 import CompSciCourses from "@/views/CS-Courses";
 import EECourses from "@/views/EE-Courses";
 import DeadEnd from "@/views/DeadEnd";
+import Requests from "@/views/Requests";
+import Help from "@/views/Help";
+import Login from "@/views/Login";
+import SubmitSchedule from "@/views/SubmitSchedule";
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: "/factory-center",
-    name: "Factory Center",
-    component: FactoryCenter,
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
     path: "/contacts",
@@ -38,20 +35,40 @@ const routes = [
     component: CompSciCourses,
   },
   {
+    path: "/submitSchedule",
+    name: "Submit Schedule",
+    component: SubmitSchedule,
+  },
+  {
     path: "/ee-courses",
     name: "Electrical Engineering Courses",
     component: EECourses,
   },
   {
+    path: "/requests",
+    name: "Request Calendar Slot",
+    component: Requests,
+  },
+  {
+    path: "/help",
+    name: "Help",
+    component: Help,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login
+  },
+  {
     path: "/:catchAll(.*)",
-    component: DeadEnd
-  }
-]
+    component: DeadEnd,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

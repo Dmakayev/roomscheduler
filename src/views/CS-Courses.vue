@@ -28,8 +28,8 @@
                           :search="search"></v-data-table>
         </v-card>
     </v-app>
-</template>
 
+</template>
 
 <script>
 
@@ -75,17 +75,30 @@
         mounted() {
             this.getClassData();
         }
-    };
 
+    };
+  },
+  methods: {
+    getClassData() {
+      fetch("./ClassList.json")
+        .then((response) => response.json())
+        .then((data) => (this.classes = data));
+      console.log(this.classes);
+    },
+  },
+  mounted() {
+    this.getClassData();
+  },
+};
 </script>
 
 <style>
-    #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>
