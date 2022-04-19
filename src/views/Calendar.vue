@@ -120,20 +120,10 @@ export default {
       "orange",
       "grey darken-1",
     ],
-    names: [
-      "CS 242",
-      "CS 330",
-      "CS 451",
-      "CS 370",
-      "CS 493",
-      "CS 384",
-      "CS 455",
-      "Study",
-    ],
     classes: [],
   }),
   methods: {
-    getClassData() {
+    getCourseData() {
       axios.get("http://127.0.0.1:8000/courses").then((response) => {
         this.classes = response.data;
       });
@@ -331,16 +321,18 @@ export default {
           }
         }
       });
-
       this.events = events;
     },
+
     rnd(a, b) {
       return Math.floor((b - a + 1) * Math.random()) + a;
     },
   },
+
   mounted() {
     this.$refs.calendar.checkChange();
-    this.getClassData();
+    this.getCourseData();
+    setTimeout(this.updateRange, 500);
   },
 };
 </script>

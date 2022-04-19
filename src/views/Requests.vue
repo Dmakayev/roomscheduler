@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="stretch">
       <v-col cols="2" align-self="center">
-        <v-subheader class="justify-center"> Instructor Name </v-subheader>
+        <v-subheader class="justify-center"> Requester Name </v-subheader>
       </v-col>
 
       <v-col cols="3" align-self="center">
@@ -11,7 +11,7 @@
           :items="facultyList"
           item-text="firstName"
           item-value="lastName"
-          label="Select Faculty Name"
+          label="Select Requester Name"
           persistent-hint
           return-object
           single-line
@@ -25,6 +25,29 @@
           </template>
         </v-select>
       </v-col>
+
+      <v-col cols="2" align-self="center">
+        <v-subheader class="justify-center"> Event Type </v-subheader>
+      </v-col>
+      <v-col cols="3" align-self="center">
+        <v-select
+          v-model="selectEventType"
+          :items="eventType"
+          item-text="Event Type"
+          item-value="eventType"
+          label="Select Event Type"
+          persistent-hint
+          return-object
+          single-line
+        >
+          <template v-slot:item="data">
+            {{ data.item }}
+          </template>
+          <template v-slot:selection="data">
+            {{ data.item }}
+          </template>
+        </v-select>
+      </v-col>
     </v-row>
 
     <v-row align="stretch">
@@ -35,7 +58,7 @@
       <v-col cols="3" align-self="center">
         <v-select
           v-model="selectClass"
-          :items="classList"
+          :items="classes"
           item-text="name"
           item-value="num"
           label="Select Course Name"
@@ -44,10 +67,33 @@
           single-line
         >
           <template v-slot:item="data">
-            {{ data.item.department }}{{ data.item.num }} {{ data.item.name }}
+            {{ data.item.classNumber }} {{ data.item.className }}
           </template>
           <template v-slot:selection="data">
-            {{ data.item.department }}{{ data.item.num }} {{ data.item.name }}
+            {{ data.item.classNumber }} {{ data.item.className }}
+          </template>
+        </v-select>
+      </v-col>
+
+      <v-col cols="2" align-self="center">
+        <v-subheader class="justify-center"> Room Name </v-subheader>
+      </v-col>
+      <v-col cols="3" align-self="center">
+        <v-select
+          v-model="selectRoom"
+          :items="classes"
+          item-text="room"
+          item-value="room"
+          label="Select Room"
+          persistent-hint
+          return-object
+          single-line
+        >
+          <template v-slot:item="data">
+            {{ data.item.room }}
+          </template>
+          <template v-slot:selection="data">
+            {{ data.item.room }}
           </template>
         </v-select>
       </v-col>
@@ -121,7 +167,8 @@
               @change="updateRange"
             >
               <template v-slot:event="{ event, timed, eventSummary }">
-                <div class="v-event-draggable" v-html="eventSummary()"></div>
+                <div class="v-event-draggable" v-html="eventSummary()">
+                </div>
                 <div
                   v-if="timed"
                   class="v-event-drag-bottom"
@@ -152,6 +199,7 @@ export default {
       "#4CAF50",
       "#FF9800",
       "#757575",
+      "#d7ca35",
     ],
     dragEvent: null,
     dragStart: null,
@@ -159,7 +207,10 @@ export default {
     createStart: null,
     extendOriginal: null,
     selectFaculty: { firstName: "Null", lastName: "Void" },
-    selectClass: { department: "Null", num: "Null", name: "Null" },
+    selectClass: { classNumber: "Null", className: "Null", name: "Null" },
+    selectRoom: { room: "Null" },
+    selectEventType: { eventType: "Null" },
+    eventType: ["Meeting", "Class", "Private"],
     facultyList: [],
     classList: [],
     classes: [],
@@ -201,7 +252,7 @@ export default {
       } else {
         this.createStart = this.roundTime(mouse);
         this.createEvent = {
-          name: `${this.selectFaculty.lastName} ${this.selectFaculty.firstName} | ${this.selectClass.department}${this.selectClass.num} ${this.selectClass.name}`,
+          name: `${this.selectFaculty.lastName} ${this.selectFaculty.firstName}`,
           color: this.rndElement(this.colors),
           start: this.createStart,
           end: this.createStart,
@@ -508,6 +559,7 @@ export default {
     this.getNameData();
     this.getClassData();
     this.getCourseData();
+    setTimeout(this.updateRange, 500);
   },
 };
 </script>

@@ -20,6 +20,7 @@
             label="Search"
             single-line
             hide-details
+            clearable
           ></v-text-field>
           <v-spacer></v-spacer>
           <v-dialog v-model="dialog" max-width="500px">
