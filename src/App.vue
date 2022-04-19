@@ -46,7 +46,7 @@
           >Requests
         </v-btn>
         <v-btn class="mx-2" depressed elevation="2" to="/cs-courses"
-          >CS Courses
+          >Course List
         </v-btn>
         <v-btn class="mx-2" depressed elevation="2" to="/submitSchedule"
           >Submit Schedule
