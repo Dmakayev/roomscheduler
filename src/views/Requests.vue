@@ -67,10 +67,12 @@
           single-line
         >
           <template v-slot:item="data">
-            {{ data.item.classNumber }} {{ data.item.className }}
+            {{ data.item.classNumber }}-{{ data.item.sectionNumber }}
+            {{ data.item.className }}
           </template>
           <template v-slot:selection="data">
-            {{ data.item.classNumber }} {{ data.item.className }}
+            {{ data.item.classNumber }}-{{ data.item.sectionNumber }}
+            {{ data.item.className }}
           </template>
         </v-select>
       </v-col>
@@ -167,8 +169,7 @@
               @change="updateRange"
             >
               <template v-slot:event="{ event, timed, eventSummary }">
-                <div class="v-event-draggable" v-html="eventSummary()">
-                </div>
+                <div class="v-event-draggable" v-html="eventSummary()"></div>
                 <div
                   v-if="timed"
                   class="v-event-drag-bottom"
@@ -207,12 +208,15 @@ export default {
     createStart: null,
     extendOriginal: null,
     selectFaculty: { firstName: "Null", lastName: "Void" },
-    selectClass: { classNumber: "Null", className: "Null", name: "Null" },
+    selectClass: {
+      classNumber: "Null",
+      sectionNumber: "Null",
+      className: "Null",
+    },
     selectRoom: { room: "Null" },
     selectEventType: { eventType: "Null" },
     eventType: ["Meeting", "Class", "Private"],
     facultyList: [],
-    classList: [],
     classes: [],
     focus: "",
     displayTypes: "week",
@@ -244,10 +248,8 @@ export default {
     },
     startTime(tms) {
       const mouse = this.toTime(tms);
-
       if (this.dragEvent && this.dragTime === null) {
         const start = this.dragEvent.start;
-
         this.dragTime = mouse - start;
       } else {
         this.createStart = this.roundTime(mouse);
@@ -290,6 +292,17 @@ export default {
       }
     },
     endDrag() {
+      axios.post("http://127.0.0.1:8000/requests", {
+        firstName: this.selectFaculty.firstName,
+        lastName: this.selectFaculty.lastName,
+        classNumber: this.selectClass.classNumber,
+        sectionNumber: this.selectClass.sectionNumber,
+        className: this.selectClass.className,
+        room: this.selectRoom.room,
+        eventType: this.selectEventType,
+        startTime: new Date(this.createEvent.start).toString(),
+        endTime: new Date(this.createEvent.end).toString(),
+      });
       this.dragTime = null;
       this.dragEvent = null;
       this.createEvent = null;
@@ -350,12 +363,6 @@ export default {
       axios.get("http://127.0.0.1:8000/FacultyNames").then((response) => {
         this.facultyList = response.data;
       });
-    },
-
-    getClassData() {
-      fetch("./ClassList.json")
-        .then((response) => response.json())
-        .then((data) => (this.classList = data));
     },
     viewDay({ date }) {
       this.focus = date;
@@ -557,7 +564,6 @@ export default {
   },
   mounted() {
     this.getNameData();
-    this.getClassData();
     this.getCourseData();
     setTimeout(this.updateRange, 500);
   },
