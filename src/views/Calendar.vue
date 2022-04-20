@@ -121,11 +121,17 @@ export default {
       "grey darken-1",
     ],
     classes: [],
+    meetings: [],
   }),
   methods: {
     getCourseData() {
       axios.get("http://127.0.0.1:8000/courses").then((response) => {
         this.classes = response.data;
+      });
+    },
+    getMeetingData() {
+      axios.get("http://127.0.0.1:8000/requests").then((response) => {
+        this.meetings = response.data;
       });
     },
     viewDay({ date }) {
@@ -321,9 +327,27 @@ export default {
           }
         }
       });
+
+      this.meetings.forEach((meetingItem) => {
+        const eventColor = this.colors[this.rnd(0, this.colors.length - 1)];
+        events.push({
+          name: meetingItem.firstName + " " + meetingItem.lastName,
+          instructor: "Host: " + meetingItem.firstName + " " + meetingItem.lastName,
+          details: "Meeting Type: " + meetingItem.eventType,
+          room: "Room: " + meetingItem.room,
+          sectionNum: "Section: " + meetingItem.sectionNumber,
+          sectionTime:
+            moment(meetingItem.startTime).format("HH:mm") +
+            " - " +
+            moment(meetingItem.endTime).format("HH:mm"),
+          start: moment(meetingItem.startTime).format("YYYY-MM-DD HH:mm"),
+          end: moment(meetingItem.endTime).format("YYYY-MM-DD HH:mm"),
+          color: eventColor,
+          timed: !allDay,
+        });
+      });
       this.events = events;
     },
-
     rnd(a, b) {
       return Math.floor((b - a + 1) * Math.random()) + a;
     },
@@ -332,6 +356,7 @@ export default {
   mounted() {
     this.$refs.calendar.checkChange();
     this.getCourseData();
+    this.getMeetingData();
     setTimeout(this.updateRange, 500);
   },
 };
