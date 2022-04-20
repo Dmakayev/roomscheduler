@@ -35,17 +35,16 @@
 
     <v-main>
       <div class="text-center">
-        <v-btn class="mx-2" depressed elevation="2" to="/">Home </v-btn>
-        <v-btn class="mx-2" depressed elevation="2" to="/contacts"
-          >Contacts
-        </v-btn>
         <v-btn class="mx-2" depressed elevation="2" to="/calendar"
           >Calendar
+        </v-btn>
+        <v-btn class="mx-2" depressed elevation="2" to="/contacts"
+          >Contacts
         </v-btn>
         <v-btn class="mx-2" depressed elevation="2" to="/requests"
           >Requests
         </v-btn>
-        <v-btn class="mx-2" depressed elevation="2" to="/cs-courses"
+        <v-btn class="mx-2" depressed elevation="2" to="/courses"
           >Course List
         </v-btn>
         <v-btn class="mx-2" depressed elevation="2" to="/submitSchedule"

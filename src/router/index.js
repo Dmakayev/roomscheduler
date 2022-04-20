@@ -1,10 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/views/Home.vue";
 import Contacts from "@/views/Contacts";
 import Calendar from "@/views/Calendar";
-import CompSciCourses from "@/views/CS-Courses";
-import EECourses from "@/views/EE-Courses";
+import Courses from "@/views/Courses";
 import DeadEnd from "@/views/DeadEnd";
 import Requests from "@/views/Requests";
 import Help from "@/views/Help";
@@ -16,8 +14,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    redirect: "/calendar",
   },
   {
     path: "/contacts",
@@ -30,19 +27,14 @@ const routes = [
     component: Calendar,
   },
   {
-    path: "/cs-courses",
-    name: "Computer Science Courses",
-    component: CompSciCourses,
+    path: "/courses",
+    name: "Courses",
+    component: Courses,
   },
   {
     path: "/submitSchedule",
     name: "Submit Schedule",
     component: SubmitSchedule,
-  },
-  {
-    path: "/ee-courses",
-    name: "Electrical Engineering Courses",
-    component: EECourses,
   },
   {
     path: "/requests",
@@ -57,7 +49,7 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-    component: Login
+    component: Login,
   },
   {
     path: "/:catchAll(.*)",
