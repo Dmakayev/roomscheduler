@@ -6,7 +6,6 @@ import Courses from "@/views/Courses";
 import DeadEnd from "@/views/DeadEnd";
 import Requests from "@/views/Requests";
 import Help from "@/views/Help";
-import Login from "@/views/Login";
 import SubmitSchedule from "@/views/SubmitSchedule";
 
 Vue.use(VueRouter);
@@ -45,11 +44,6 @@ const routes = [
     path: "/help",
     name: "Help",
     component: Help,
-  },
-  {
-    path: "/login",
-    name: "Login",
-    component: Login,
   },
   {
     path: "/:catchAll(.*)",

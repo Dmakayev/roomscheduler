@@ -38,6 +38,63 @@
         </v-toolbar>
       </v-sheet>
       <v-sheet height="600">
+         <v-dialog v-model="dialog" max-width="500px">
+            <v-card>
+              <v-card-title>
+                <span class="text-h5">Edit Class</span>
+              </v-card-title>
+              <v-card-text>
+                <v-container>
+                  <v-row>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field
+                        v-model="editedClass.className"
+                        label="Class Name"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field
+                        v-model="editedClass.credits"
+                        label="Credits"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field
+                        v-model="editedClass.room"
+                        label="Room"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field
+                        v-model="editedClass.instructor"
+                        label="Instructor"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field
+                        v-model="editedClass.sectionNumber"
+                        label="Section"
+                      ></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field
+                        v-model="editedClass.time"
+                        label="Time"
+                      ></v-text-field>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card-text>
+              <v-card-actions>
+              <v-btn text color="secondary" @click="dialog = false">
+                Cancel
+              </v-btn>
+              <v-btn text color="secondary" @click="saveClass()">
+                Save
+              </v-btn>
+            </v-card-actions>
+            </v-card>
+          </v-dialog>
         <v-calendar
           ref="calendar"
           v-model="focus"
@@ -60,27 +117,24 @@
           <v-card color="grey lighten-4" min-width="350px" flat>
             <v-toolbar :color="selectedEvent.color" dark>
               <v-btn icon>
-                <v-icon>mdi-pencil</v-icon>
+                <v-icon @click="editClass()">mdi-pencil</v-icon>
               </v-btn>
               <v-toolbar-title v-html="selectedEvent.name"></v-toolbar-title>
               <v-spacer></v-spacer>
               <v-btn icon>
-                <v-icon>mdi-heart</v-icon>
-              </v-btn>
-              <v-btn icon>
-                <v-icon>mdi-dots-vertical</v-icon>
+                <v-icon @click="deleteClass(selectedEvent)">mdi-delete</v-icon>
               </v-btn>
             </v-toolbar>
             <v-card-text>
-              <span v-html="selectedEvent.details"></span>
+              <span>Credits: {{ selectedEvent.credits }}</span>
               <br />
-              <span v-html="selectedEvent.room"></span>
+              <span>Room: {{ selectedEvent.room }}</span>
               <br />
-              <span v-html="selectedEvent.instructor"></span>
+              <span>Instructor: {{ selectedEvent.instructor }}</span>
               <br />
-              <span v-html="selectedEvent.sectionNum"></span>
+              <span>Section Number: {{ selectedEvent.sectionNum }}</span>
               <br />
-              <span v-html="selectedEvent.sectionTime"></span>
+              <span>Time: {{ selectedEvent.sectionTime }}</span>
             </v-card-text>
             <v-card-actions>
               <v-btn text color="secondary" @click="selectedOpen = false">
@@ -88,6 +142,19 @@
               </v-btn>
             </v-card-actions>
           </v-card>
+          <v-dialog v-model="deleteDialog" max-width="500px">
+            <v-card>
+              <v-card-title class="text-h5"
+                >Are you sure you want to delete this item?</v-card-title
+              >
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="blue" @click="cancelDelete()">Cancel</v-btn>
+                <v-btn color="blue" @click="deleteClassConfirm()">Yes</v-btn>
+                <v-spacer></v-spacer>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-menu>
       </v-sheet>
     </v-col>
@@ -110,6 +177,8 @@ export default {
     selectedEvent: {},
     selectedElement: null,
     selectedOpen: false,
+    dialog: false,
+    deleteDialog: false,
     events: [],
     colors: [
       "blue",
@@ -121,9 +190,69 @@ export default {
       "grey darken-1",
     ],
     classes: [],
+    isEdit: false,
+    editedClass: {
+      className: "",
+      credits: "",
+      room: "",
+      instructor: "",
+      section: "",
+      time: ""
+    },
     meetings: [],
   }),
   methods: {
+    editClass() {
+      this.editedClass = JSON.parse(JSON.stringify(this.selectedEvent.class))
+      this.isEdit = true
+      this.dialog = true;
+      this.selectedOpen = false;
+    },
+    addClass(){
+      this.isEdit = false
+      this.dialog = true;
+      this.editedClass = {
+        className: "",
+        credits: "",
+        room: "",
+        instructor: "",
+        section: "",
+        time: ""
+      }
+    },
+    deleteClass() {
+      this.deleteDialog = true;
+      this.selectedOpen = false;
+    },
+    saveClass(){
+      this.dialog = false
+      if(this.isEdit){
+        axios
+          .put(`http://127.0.0.1:8000/courses/${this.selectedEvent.class.uniqueCourseID}`, this.editedClass)
+          .then(() => {
+            location.reload()
+      })
+      //for a new class
+      } else {
+        axios
+          .post(`http://127.0.0.1:8000/courses`, this.editedClass)
+          .then(() => {
+            location.reload()
+      })
+      }
+    },
+    cancelDelete() {
+      this.deleteDialog = false;
+      this.selectedOpen = true;
+    },
+    deleteClassConfirm() {
+      this.deleteDialog = false;
+      axios
+        .delete(`http://127.0.0.1:8000/courses/${this.selectedEvent.class.uniqueCourseID}`)
+        .then(() => {
+          location.reload()
+        })
+    },
     getCourseData() {
       axios.get("http://127.0.0.1:8000/courses").then((response) => {
         this.classes = response.data;
@@ -187,10 +316,10 @@ export default {
                 if (days === "M" && loop.getDay() === 1) {
                   events.push({
                     name: item.classNumber + " " + item.className,
-                    details: "Credits: " + item.credits,
-                    room: "Room: " + item.room,
-                    instructor: "Instructor: " + item.instructor,
-                    sectionNum: "Section: " + item.sectionNumber,
+                    credits: item.credits,
+                    room: item.room,
+                    instructor: item.instructor,
+                    sectionNum: item.sectionNumber,
                     sectionTime: item.time,
                     start:
                       loop.getFullYear() +
@@ -210,14 +339,15 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
+                    class: item
                   });
                 } else if (days === "T" && loop.getDay() === 2) {
                   events.push({
                     name: item.classNumber + " " + item.className,
-                    details: "Credits: " + item.credits,
-                    room: "Room: " + item.room,
-                    instructor: "Instructor: " + item.instructor,
-                    sectionNum: "Section: " + item.sectionNumber,
+                    credits: item.credits,
+                    room: item.room,
+                    instructor: item.instructor,
+                    sectionNum: item.sectionNumber,
                     sectionTime: item.time,
                     start:
                       loop.getFullYear() +
@@ -237,14 +367,15 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
+                    class: item
                   });
                 } else if (days === "W" && loop.getDay() === 3) {
                   events.push({
                     name: item.classNumber + " " + item.className,
-                    details: "Credits: " + item.credits,
-                    room: "Room: " + item.room,
-                    instructor: "Instructor: " + item.instructor,
-                    sectionNum: "Section: " + item.sectionNumber,
+                    credits: item.credits,
+                    room: item.room,
+                    instructor: item.instructor,
+                    sectionNum: item.sectionNumber,
                     sectionTime: item.time,
                     start:
                       loop.getFullYear() +
@@ -264,14 +395,15 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
+                    class: item
                   });
                 } else if (days === "R" && loop.getDay() === 4) {
                   events.push({
                     name: item.classNumber + " " + item.className,
-                    details: "Credits: " + item.credits,
-                    room: "Room: " + item.room,
-                    instructor: "Instructor: " + item.instructor,
-                    sectionNum: "Section: " + item.sectionNumber,
+                    credits: item.credits,
+                    room: item.room,
+                    instructor: item.instructor,
+                    sectionNum: item.sectionNumber,
                     sectionTime: item.time,
                     start:
                       loop.getFullYear() +
@@ -291,14 +423,15 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
+                    class: item
                   });
                 } else if (days === "F" && loop.getDay() === 5) {
                   events.push({
                     name: item.classNumber + " " + item.className,
-                    details: "Credits: " + item.credits,
-                    room: "Room: " + item.room,
-                    instructor: "Instructor: " + item.instructor,
-                    sectionNum: "Section: " + item.sectionNumber,
+                    credits: item.credits,
+                    room: item.room,
+                    instructor: item.instructor,
+                    sectionNum: item.sectionNumber,
                     sectionTime: item.time,
                     start:
                       loop.getFullYear() +
@@ -318,6 +451,7 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
+                    class: item
                   });
                 }
               });
@@ -332,7 +466,8 @@ export default {
         const eventColor = this.colors[this.rnd(0, this.colors.length - 1)];
         events.push({
           name: meetingItem.firstName + " " + meetingItem.lastName,
-          instructor: "Host: " + meetingItem.firstName + " " + meetingItem.lastName,
+          instructor:
+            "Host: " + meetingItem.firstName + " " + meetingItem.lastName,
           details: "Meeting Type: " + meetingItem.eventType,
           room: "Room: " + meetingItem.room,
           sectionNum: "Section: " + meetingItem.sectionNumber,
