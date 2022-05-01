@@ -38,63 +38,61 @@
         </v-toolbar>
       </v-sheet>
       <v-sheet height="600">
-         <v-dialog v-model="dialog" max-width="500px">
-            <v-card>
-              <v-card-title>
-                <span class="text-h5">Edit Class</span>
-              </v-card-title>
-              <v-card-text>
-                <v-container>
-                  <v-row>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedClass.className"
-                        label="Class Name"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedClass.credits"
-                        label="Credits"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedClass.room"
-                        label="Room"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedClass.instructor"
-                        label="Instructor"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedClass.sectionNumber"
-                        label="Section"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedClass.time"
-                        label="Time"
-                      ></v-text-field>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-card-text>
-              <v-card-actions>
+        <v-dialog v-model="dialog" max-width="500px">
+          <v-card>
+            <v-card-title>
+              <span class="text-h5">Edit Class</span>
+            </v-card-title>
+            <v-card-text>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field
+                      v-model="editedClass.className"
+                      label="Class Name"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field
+                      v-model="editedClass.credits"
+                      label="Credits"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field
+                      v-model="editedClass.room"
+                      label="Room"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field
+                      v-model="editedClass.instructor"
+                      label="Instructor"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field
+                      v-model="editedClass.sectionNumber"
+                      label="Section"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="12" sm="6" md="4">
+                    <v-text-field
+                      v-model="editedClass.time"
+                      label="Time"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card-text>
+            <v-card-actions>
               <v-btn text color="secondary" @click="dialog = false">
                 Cancel
               </v-btn>
-              <v-btn text color="secondary" @click="saveClass()">
-                Save
-              </v-btn>
+              <v-btn text color="secondary" @click="saveClass()"> Save </v-btn>
             </v-card-actions>
-            </v-card>
-          </v-dialog>
+          </v-card>
+        </v-dialog>
         <v-calendar
           ref="calendar"
           v-model="focus"
@@ -197,19 +195,19 @@ export default {
       room: "",
       instructor: "",
       section: "",
-      time: ""
+      time: "",
     },
     meetings: [],
   }),
   methods: {
     editClass() {
-      this.editedClass = JSON.parse(JSON.stringify(this.selectedEvent.class))
-      this.isEdit = true
+      this.editedClass = JSON.parse(JSON.stringify(this.selectedEvent.class));
+      this.isEdit = true;
       this.dialog = true;
       this.selectedOpen = false;
     },
-    addClass(){
-      this.isEdit = false
+    addClass() {
+      this.isEdit = false;
       this.dialog = true;
       this.editedClass = {
         className: "",
@@ -217,28 +215,33 @@ export default {
         room: "",
         instructor: "",
         section: "",
-        time: ""
-      }
+        time: "",
+      };
     },
     deleteClass() {
       this.deleteDialog = true;
       this.selectedOpen = false;
     },
-    saveClass(){
-      this.dialog = false
-      if(this.isEdit){
+    saveClass() {
+      this.dialog = false;
+      if (this.isEdit) {
         axios
-          .put(`http://127.0.0.1:8000/courses/${this.selectedEvent.class.uniqueCourseID}`, this.editedClass)
+          .put(
+            `http://127.0.0.1:8000/courses/${this.selectedEvent.class.uniqueCourseID}`,
+            this.editedClass
+          )
           .then(() => {
-            location.reload()
-      })
-      //for a new class
+            this.getCourseData();
+            setTimeout(this.updateRange, 500);
+          });
+        //for a new class
       } else {
         axios
           .post(`http://127.0.0.1:8000/courses`, this.editedClass)
           .then(() => {
-            location.reload()
-      })
+            this.getCourseData();
+            setTimeout(this.updateRange, 500);
+          });
       }
     },
     cancelDelete() {
@@ -248,10 +251,14 @@ export default {
     deleteClassConfirm() {
       this.deleteDialog = false;
       axios
-        .delete(`http://127.0.0.1:8000/courses/${this.selectedEvent.class.uniqueCourseID}`)
+        .delete(
+          `http://127.0.0.1:8000/courses/${this.selectedEvent.class.uniqueCourseID}`
+        )
         .then(() => {
-          location.reload()
-        })
+          this.getCourseData();
+          this.getMeetingData();
+          setTimeout(this.updateRange, 500);
+        });
     },
     getCourseData() {
       axios.get("http://127.0.0.1:8000/courses").then((response) => {
@@ -339,7 +346,7 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
-                    class: item
+                    class: item,
                   });
                 } else if (days === "T" && loop.getDay() === 2) {
                   events.push({
@@ -367,7 +374,7 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
-                    class: item
+                    class: item,
                   });
                 } else if (days === "W" && loop.getDay() === 3) {
                   events.push({
@@ -395,7 +402,7 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
-                    class: item
+                    class: item,
                   });
                 } else if (days === "R" && loop.getDay() === 4) {
                   events.push({
@@ -423,7 +430,7 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
-                    class: item
+                    class: item,
                   });
                 } else if (days === "F" && loop.getDay() === 5) {
                   events.push({
@@ -451,7 +458,7 @@ export default {
                       endTime,
                     color: eventColor,
                     timed: !allDay,
-                    class: item
+                    class: item,
                   });
                 }
               });
