@@ -292,6 +292,8 @@ export default {
       }
     },
     endDrag() {
+      this.dragTime = null;
+      this.dragEvent = null;
       axios.post("http://127.0.0.1:8000/requests", {
         firstName: this.selectFaculty.firstName,
         lastName: this.selectFaculty.lastName,
@@ -303,8 +305,6 @@ export default {
         startTime: new Date(this.createEvent.start).toString(),
         endTime: new Date(this.createEvent.end).toString(),
       });
-      this.dragTime = null;
-      this.dragEvent = null;
       this.createEvent = null;
       this.createStart = null;
       this.extendOriginal = null;
